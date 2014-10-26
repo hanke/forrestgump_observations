@@ -1,4 +1,3 @@
-How to use.tex
 article title.tex
 Authors.tex
 Abstract_.tex
