@@ -1,4 +1,334 @@
-\section*{Introduction} 
-The format of the main body of the article is flexible: it should be concise and in the format most appropriate to displaying the content of the article.
+\section*{Background} 
+%The format of the main body of the article is flexible: it should be concise and in the format most appropriate to displaying the content of the article.
 
-A brief summary of how this work was motivated and how it links to existing and future work.
+%A brief summary of how this work was motivated and how it links to existing and future work.
+
+Recently, we have published a dataset with high-resolution functional magnetic
+resonance (fMRI) data of 20 participants listening to a two-hour audio-movie of
+the Hollywood feature film ``Forrest Gump'' \cite{HBI+14}. Using prolonged
+complex naturalistic stimuli, such as this one, is one approach to study
+cognitive processing in situations that resemble real-life contexts more
+closely than controlled laboratory settings typically employed to investigate
+individual cognitive functions in isolation \cite{HH2012}. However,
+multidimensional stimuli and the resulting lack of experimental control can
+make it harder to isolate the intervening parameters \cite{HH2012}. Here we
+want to lay the groundwork for an attempt to embrace this challenge with a
+focus on a highly relevant aspect of social cognition that is
+very difficult to infer from an audio-visual stimulus by means of computer
+algorithms: portrayed emotions.
+
+The presentation of movie (clips) to elicit emotional responses is an
+established component of emotion research, in particular with respect to more
+differentiated emotional states, such as remorse or pride, that go beyond
+primary emotions like fear in complexity and time-scale\cite{GL1995}. Emotion
+cues in movies can be manifold: facial expressions (e.g.
+smiling)\cite{Ekm1992b}, verbal cues (e.g. swearing), voice characteristics
+(e.g. trembling voice)\cite{EVS+2009}, or even context cues that can be used to
+reason about emotional aspects of a situation based on abstract causal
+principles rather than direct perceptual cues\cite{SS2014}.  Moreover, the
+emotional response to a stimulus in a real-life setting is further dependent on
+additional factors. For example, observing a facial expression of sadness may
+yield an emotional response of pity or satisfaction, depending on whether the
+person is a friend or a punished offender of social norms. A smiling face is
+not an expression of happiness when the larger context identifies it as a
+strategy to avoid unpleasant social interactions (e.g. a ``fake'' smile).
+Consequently, labeling portrayed emotions in feature films is a task that
+requires human observers to perform complex judgements.
+
+Two groups of frameworks for systematic description of emotions are
+distinguished in the literature: a) schemes with discrete emotions (labels) and
+b) dimensional models \cite{GW2007}.  Models using discrete emotion labels vary
+considerably in the number of differentiated emotion states. Many theories
+assume few basic, innate emotions \cite{Ekm1992a}, others discriminate up to
+36 affective categories \cite{Sch2005}.  Dimensional models, for example the
+circumplex model, locate different emotional states in a two-dimensional
+space, commonly using the axes arousal and valence \cite{Rus1980}.
+
+Current emotion assessment tools, like the Facial Action Coding System (FACS),
+or the Specific Affect Coding System (SPAFF)\cite{CG2007}, attempt to combine
+both approaches. However, they typically involve following complex instructions
+regarding the interpretation of facial expressions or other physical and
+cultural indicators of emotion\cite[p. 281]{CG2007} and, thus, require an
+intensive training of observers. While these tools provide reliable procedures
+for rating emotions, they are not very intuitive and consequently only
+accessible to a selected group of experts. Moreover, emotions portrayed in
+movies are typically performed by actors that mimic a target expression to the
+best of their abilities that does not necessarily reflect their true emotional
+status.  Consequently, individual indicators of emotions may be missing,
+exaggerated, or even contradictory in comparison to ``real'' emotions.
+
+In this study we implemented a simplified procedure that combines a dimensional
+rating with a categorical labeling of emotions and their perceptual evidence
+that was performed by a group of observers from the same student population
+that the participants in our original imaging studies were drawn
+from\cite{HBI+14}.  The goal was to describe the emotional content of the
+Forrest Gump movie stimulus while maintaining potential interpretations biases
+introduced by age, native language, or education.
+
+The primary purpose of these annotations is to complement our previously
+released brain imaging data to enable analyses of the brain's response to
+versatile emotion cues in real-life settings with real-life complexity. To this
+end, dedicated annotations of the audio-movie stimulus have been performed.
+Combined, these data form a two-hour high-resolution fMRI measurement for
+auditory emotion cue processing from 20 participants. In order to facilitate
+future studies the annotations go beyond the auditory domain and includes
+visual indicators of emotion. They will complement a future data release with
+fMRI data recorded while subjects watch the audio-visual movie.  Moreover,
+these new annotations of portrayed emotions are another small steps towards a
+comprehensive description of our reproducible movie stimulus\cite{HBI+14} and
+improves its utility for independent studies with a focus on the perception of
+emotion in naturalistic settings.
+
+
+%But how does this physiological data
+%compare to subjective perception? To produce such comparable data we annotated
+%the movie Forrest Gump.
+
+%
+%In any case, reading emotional expression in another person is something we are
+%confronted with every day and somehow instinctively we are all experts in it
+%\cite{CG2007}. This is why we believe that a valid emotion
+%assessment tool should be intuitive and usable by everyone, regardless of their
+%educational background. 
+%
+%Hence, we aimed our study at developing an easy-to-use tool to assess emotions
+%which eliminates the necessity of intensive training. Nevertheless, we
+%considered it important to gain sufficiently detailed information and generate
+%quality data. Therefore, we decided to combine dimensional and categorical
+%measurements to describe emotions on various levels instead of focussing on its
+%single aspects.
+%
+%Being more intuitive and freely accessible, this tool might enable and
+%encourage more people interested in emotion research to enter the field,
+%conduct new studies and replicate long-known findings within the more
+%naturalistic setting of movies.
+%
+%
+
+
+
+%Using feature films as stimuli to study the
+%complex inter-play of cognitive processes involved in emotions, requires .
+%
+%The reliable induction of emotional states is important to understand emotional
+%processes in experimental settings. One method, eliciting these emotional
+%states, is the presentation of movies, especially since the interest in
+%studying more differentiated emotional states is increasing. With this
+%procedure researchers are able to use both, a dimensional viewpoint and
+%discrete emotion perspective \cite{GL1995}.
+%
+%Due to the problem of eliciting emotions in the laboratory \cite{GL1995}, it would be desirable to be able to rate the portrayed emotions in
+%movies and therefore improve the selection of specific audio-visual material.
+%The aim of our study was to develop such a procedure to annotate the movie
+%“Forrest Gump”.
+%
+%
+%
+%
+%The selection of the applied emotion theory is critical for developing a
+%reliable emotion rating system.
+%
+%Especially, a clear emotion definition and discrimination of other affective
+%phenomena bears importance. In the literature attention is repeatedly drawn to
+%the differentiation of mood and emotion. Moods are considered longer in
+%duration, lower in intensity, with no apparent cause compared to emotion
+%\cite{Sch2005,GW2007}. Since actors react primarily to proximate
+%factors, e. g. the surrounding environment, other characters and their
+%behavior, emotions hold the main interest in the affect assessment of movies.
+%
+%
+%
+%
+%The system introduced in this study takes both approaches in consideration,
+%enabling the rater to make statements about arousal and valence in binary form
+%as well as adding discrete emotion labels.
+%
+%Another important element in consideration is through what cues emotions are
+%portrayed. For instance, facial expression might be used to identify emotions
+%in other humans. Ekman (1992) found evidence for up to five different
+%expressions for each emotion, however the exact number of universal facial
+%expressions remains unknown \cite{Ekm1992b}.
+%
+%Further, vocally expressed emotions are important. Ethofer and colleagues
+%presented pseudowords spoken in five prosodic categories during event-related
+%fMRI to investigate the discrimination of these categories based on spatial
+%response patterns within the auditory cortex \cite{EVS+2009}.  Emotional
+%information could be classified with specific patterns, which generalized
+%across speakers.
+%
+%Equally important, emotions can also be inferred from situational information.
+%We impute emotions in the absence of overt expressions by reasoning about the
+%situation and relying on abstract causal principles rather than direct
+%perceptual cues, even for expressions we have never observed nor experienced
+%\cite{SS2014}. This underestimated aspect might be crucial, since not
+%only the main character “Forrest Gump” sometimes lacks in emotional
+%expressions. 
+%
+%Because of the complexity of different cues for recognising emotions, our study
+%may provide evidence whether it is possible for a number of raters to perceive
+%the same portrayed emotions and to what extent affects are transmitted by each
+%of the different cues.
+%
+%One aim of our study was to develop a method which enables different
+%participants to make reliable and nearly identical annotations of emotions
+%shown by the actors in the movie “Forrest Gump”. 
+%
+%Our study might be seen as a progression of the similar methods used by Skerry
+%and Saxe\cite{SS2014}. The researchers made subjects watch brief video clips
+%designed to elicit the attribution of an emotional state (either positive or
+%negative) in an expression or situation condition.
+%
+%We watched the movie in a randomised order and rated portrayed emotions in
+%regard to their temporal occurrence, valence, direction, arousal as well as
+%onset and offset cues. Additionally, participants were able to assign discrete
+%emotion labels. Assessing jokes was also one of our interests.The raters
+%assigned to one of two groups. They either watched the audio-visual version of
+%the movie or listened to the audio track with audio description. We settled for
+%this variation to investigate whether the absence of facial expressions and
+%body language makes a crucial difference in the perception of portrayed
+%emotions.
+%
+%Discussion
+%
+%In conclusion, our results indicate that is it possible to find general
+%emotions in movies or other digital video data with our developed method. By
+%the current state of scientific knowledge, limitations arise in rating concrete
+%emotions due to the lack of ageneral system for emotion categorization. It was
+%necessary to compromise between concrete emotion rating and sufficient
+%consistency over all raters. Our method was developed to produce objective and
+%representative data but to achieve more validated and congruent results, this
+%procedure has to be repeated with more raters. The distribution in age and
+%ethnic backgrounds has to be wider to produce more generalizable data. Older
+%people might annotate in another way or might perceive different emotions than
+%teenagers.
+%
+%Different cultures, socioeconomic states or different education could also lead
+%to varying results.
+%
+%Although we covered a great range of possible hazardous variables, our rating
+%system produced contradictory results especially in the rating of direction,
+%valence and intensity. Because there is more than one association with the
+%concepts of these words, it was possible to observe a positive and a negative
+%emotion portrayed by one character at the same time between the different
+%raters. It might be essential for raters to receive a special training before
+%the actual rating, to gain a general understanding of used concepts. On all
+%accounts,concrete definitions are essential for such sensible terms.
+%
+%The emotion rating was not our exclusive purpose. The rating of the jokes as
+%our second interest of research was completely unaffected by the vague concepts
+%of direction, intensity and valence. We intended to solely annotate the
+%temporal occurrence of the jokes, because the movie “Forrest Gump” features
+%many implicit jokes. However, some issues arose in their rating process leading
+%to a great variation in the number of recognized jokes. Because our first
+%attempt was to annotate the emotions, the primary attention was not applied to
+%the jokes. In some circumstances greater attention could be achieved by the
+%conduction of more rating runs or forming more groups. 
+%
+%Even for this annotator group the randomization of the scenes is potential to
+%prevent possible sequence effects and to increase internal validity. Though,
+%there has to be observance of the necessity that in this procedure we had to
+%watch previous scenes due to the lacking scene splits. With this limitation it
+%was not feasible to avoid some sequence effects and this results in the lack of
+%internal validity.  We tried to achieve congruent results in the character
+%nomination with a list of all characters occurring in the movie. But the
+%results indicated that it would have been necessary to create a concrete sample
+%of characters to annotate, especially involving important and insignificant
+%supporting characters. This resulted in the great variation in the amount of
+%annotated emotions between raters.  In summary improvements should be
+%undertaken for future emotion annotations, but we made a scientific and
+%profound start for this kind of method. 
+%
+%Conclusion
+%
+%Emotions portrayed by actors in a movie are scarcely examined due to the
+%predominant focus on emotions elicited in subjects watching a movie.
+%Nevertheless this could give an important basis to further research of the
+%recognition of emotions (as listed above, emotions can be interpreted through
+%facial expression, vocal expressions or situational cues) and what stimuli
+%actually elicit emotions in the audience.
+%
+%The method is not limited to one movie, but could be used in other studies as
+%well.
+%
+%Furthermore our data could be used to investigate whether subjects watching the
+%movie actually responded with the emotion the movie was intended to produce.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%Inspired by the approach of Uri Hasson to investigate emotions in a more
+%naturalistic way using movies we aspired to enter the field of natural
+%stimulation in emotion research \cite{HNL+2004}.
+%
+%The study at hand was undertaken in a seminar by third semester students of
+%psychology and was part of the larger project “Studyforrest” conducted by the
+%Psychoinformatics laboratory at Otto-von-Guericke-University Magdeburg,
+%Germany. Studyforrest collects versatile data based on the movie “Forrest
+%Gump”, including measurements in fMRI, physiology, eye movement, EEG and
+%others.Thereby it aims to “enable inter-disciplinary research to study the
+%brain's natural behavior” (Hanke, n.d.) and to provide freely accessible data
+%for researchers all over the world. 
+%
+%The movie “Forrest Gump” has been perceived to offer not only a wide spectrum
+%of emotions, but also to depict these emotions in an easily comprehensible
+%manner. 
+%
+%The study at hand distinguishes between displayed and perceived emotions and we
+%decided to explore the former. By evaluating only the emotions presented by the
+%actors (displayed emotion) we want to lay groundwork for further research
+%focussing on the ones experienced while watching the movie (perceived emotion).
+%
+%In the course of that process, we realized that emotion rating is a very
+%complex endeavour. Not only is there no universally accepted definition of what
+%emotions are, but also the various dynamic and interactive reactionary systems
+%emotions are expressed in make it basically impossible to reliably measure them
+%\cite[p. 363]{NK2007}. According to Gray and Watson (2007),
+%emotion can be measured either categorically or dimensionally \cite{GW2007}. And while both
+%approaches have their scientific relevance, there are opposing opinions as to
+%whether they are compatible or not \cite[p. 172f]{GW2007}.
+%
+%Recent emotion assessment tools like the Facial Action Coding System, FACS, or
+%the Specific Affect Coding System, SPAFF \cite{CG2007}, attempt to combine both measurements.
+%But they follow complex instructions regarding facial muscular activity or
+%other physical and cultural indicators of emotion \cite[p. 281]{CG2007}.
+%and, thus, require an intensive training. Thereby, on the one hand they provide
+%a highly scientific and very reliable manner of rating emotions, on the other
+%hand they consequently appear less intuitive and are only accessible to a
+%selected group of experts. 
+%
+%In any case, reading emotional expression in another person is something we are
+%confronted with every day and somehow instinctively we are all experts in it
+%\cite{CG2007}. This is why we believe that a valid emotion
+%assessment tool should be intuitive and usable by everyone, regardless of their
+%educational background. 
+%
+%Hence, we aimed our study at developing an easy-to-use tool to assess emotions
+%which eliminates the necessity of intensive training. Nevertheless, we
+%considered it important to gain sufficiently detailed information and generate
+%quality data. Therefore, we decided to combine dimensional and categorical
+%measurements to describe emotions on various levels instead of focussing on its
+%single aspects.
+%
+%Being more intuitive and freely accessible, this tool might enable and
+%encourage more people interested in emotion research to enter the field,
+%conduct new studies and replicate long-known findings within the more
+%naturalistic setting of movies.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%Not too long ago a movement formed within the reigns of neuropsychology which
+%took experimental conditions “to the streets” with ‘naturalistic stimulation’.
+%A pioneer of this new direction is the ‘Study Forrest’ project which used the
+%well known movie “Forrest Gump” as a stimulus to evaluate on brain activation
+%during natural display of emotions. But how does this physiological data
+%compare to subjective perception? To produce such comparable data we annotated
+%the movie Forrest Gump.
+
