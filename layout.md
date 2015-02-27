@@ -1,4 +1,3 @@
-article title.tex
 Authors.tex
 Abstract_.tex
 introduction.tex
