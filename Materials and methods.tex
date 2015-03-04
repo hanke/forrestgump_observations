@@ -41,13 +41,14 @@ TODO: include script for blueray conversion
 \subsection*{Observers}
 
 Annotations were created by the authors themselves as part of a practical
-course on scientific observation. A total of 14? students at the
-Otto-von-Guericke-University in Magdeburg, Germany participated in this effort
-and received course credit.  Based on personal preference, students assigned
-themselves to one of two groups tasked with the annotation of portrayed emotion
-in either the audio-visual movie, or the audio-only version. The audio-visual
-group consisted of 10?  students (all female), the audio-only group comprised
-four? students (all male).
+course on scientific observation. A total of \AVTotalRaters +\AOTotalRaters
+(TODO) students at the Otto-von-Guericke-University in Magdeburg, Germany
+participated in this effort and received course credit.  Based on personal
+preference, students assigned themselves to one of two groups tasked with the
+annotation of portrayed emotion in either the audio-visual movie, or the
+audio-only version. The audio-visual group consisted of \AVTotalRaters\
+students (all female), the audio-only group comprised \AOTotalRaters\ students
+(all male).
 
 TODO: add a note on gender distribution in the discussion
 
@@ -65,24 +66,24 @@ them typically involve a change of location or fast progression of time that
 make persistence of the nature of portrayed emotions across scenes less likely.
 
 Observers were instructed to work alone in a setting free of distractions, and
-to use headphone for optimal saliency of the stimulus. There was no strict
-guideline regarding the length of an annotation session, but observer were
+to use headphones for optimal saliency of the stimulus. There was no strict
+guideline regarding the length of an annotation session, but observers were
 informed to stop working for any number of breaks whenever they could no longer
 guarantee a high level of attention for the task. Sessions were typically
 spread over multiple days over the course of three weeks. On average, observers
-required around 30 hours each to complete the annotation. TODO: is that correct?
+required around 30 hours each to complete the annotation.
 
 \subsection*{Annotation content}
 
 Each observer collected annotations in a spreadsheet application with columns
 for start time and end time of an emotion, a label of the movie character
 portraying the emotion, variables for valence, arousal and direction of the
-emotion, as well as a list of categories of identified indicators for the start
-and end of an emotion. Each of these variables are described in more detail in
-the remainder of this section. In addition, observers also recorded the index
-of the scene containing a respective emotion. This variable was only used for
-error detection (mismatch of emotion duration with the start and end time of a
-scene).
+emotion, as well as an optional emotion category label, and a list of
+identified indicators for the start and end of an emotion. Each of these
+variables are described in more detail in the remainder of this section. In
+addition, observers also recorded the index of the scene containing a
+respective emotion. This variable was only used for error detection (mismatch
+of emotion duration with the start and end time of a scene).
 
 \paragraph{Start and end time}
 
@@ -92,8 +93,8 @@ defined as the time were no evidence indicating an emotion is present anymore.
 Observers were instructed to aggregate short segments of uniform emotional
 episodes into a single annotation. For example, if a character was happy and
 smiling throughout a long period in a scene, the annotation would span all the
-time for the beginning to the end of the smile even if the character's face was
-not visible the entire period, as long as not evidence of a change of emotion
+time from the beginning to the end of the smile even if the character's face was
+not visible the entire period, as long as no evidence of a change of emotion
 was found.  All times are reported in seconds. Although Advene offers time
 stamps with the precision of the movie frame rate (25 frames per second),
 pre-tests revealed that the temporal accuracy of human observers for complex
@@ -192,6 +193,14 @@ and whether the emotion is directed towards the character itself or another one
 coarse categorization of observed emotion in the spirit of dimensional models
 of emotion.
 
+Arousal was considered a global indicator of the emotional status of a
+character, i.e. for any given time in the movie annotations either indicate a
+high level of arousal for a character or a low level, but never both at the
+same time. Unlike arousal, valence and direction indicators were considered
+non-exclusive, i.e. a character could show signs of positive and negative
+emotions at the same time. Likewise a character could exhibit self-directed
+emotions, and emotions directed towards others simultaneously.
+
 \paragraph{Emotion labels}
 
 Observers were instructed to assign one of 22 discrete emotion labels. Emotion
@@ -201,7 +210,7 @@ complete list of emotions is shown in table \ref{tab:emotion_categories}.
 Pre-tests using a larger and more detailed set of emotion categories reveal
 weak agreement between observers for a forced categorization of emotional
 episodes. Based on these results we decided to make this part of the annotation
-optional and observers were instructed to assign an emotion labels only if they
+optional and observers were instructed to assign an emotion label only if they
 saw a ``perfect'' match with any of the categories.
 
 TODO: give list of max inter-rater reliability for labels
@@ -245,7 +254,7 @@ Indicators of emotion onset and offset further characterize the nature of a
 portrayed emotion. Onset indicators describe what kind of evidence for an
 emotion was detected in the movie stimulus. We distinguished facial
 expressions, body language cues, context information, verbal and non-verbal
-audio cues.Observers could record multiple onset indicators. Despite the term
+audio cues. Observers could record multiple onset indicators. Despite the term
 ``onset'' these indicators did not all have to be present at the very beginning
 of an emotional episode. For example, an extended period of sadness could start
 with a facial expression and later on add a congruent body language cue.  In
