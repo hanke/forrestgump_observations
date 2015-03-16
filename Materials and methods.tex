@@ -36,13 +36,13 @@ relevant audio-content in the movie. The second variant is the audio-visual
 movie with the original dubbed German soundtrack (without narrations) and the
 exact same timing (and cut scenes) as the audio-only version.
 
-TODO: include script for blueray conversion
+\hl{TODO: include script for blueray conversion}
 
 \subsection*{Observers}
 
 Annotations were created by the authors themselves as part of a practical
 course on scientific observation. A total of \AVTotalRaters +\AOTotalRaters
-(TODO) students at the Otto-von-Guericke-University in Magdeburg, Germany
+\hl{TODO} students at the Otto-von-Guericke-University in Magdeburg, Germany
 participated in this effort and received course credit.  Based on personal
 preference, students assigned themselves to one of two groups tasked with the
 annotation of portrayed emotion in either the audio-visual movie, or the
@@ -50,7 +50,7 @@ audio-only version. The audio-visual group consisted of \AVTotalRaters\
 students (all female), the audio-only group comprised \AOTotalRaters\ students
 (all male).
 
-TODO: add a note on gender distribution in the discussion
+\hl{TODO: add a note on gender distribution in the discussion}
 
 \subsection*{Procedure}
 
@@ -108,79 +108,62 @@ in seconds only.
 This label identifies which movie character is portraying an emotion. Observers
 were provided with a list of character labels that was derived from an
 annotation of the movie's dialog in order to achieve a consistent labeling.
-However, some characters portray emotions but have no lines of dialog.
-Observers were instructed to individually assign a descriptive label of their
-choosing. During data curation character labels were manually consolidated
-into a set of 99 different labels that uniformize labeling across observers.
-Moreover, labels were collapsed whenever a uniform identification of a
-character could not be guaranteed across observers. For example, the character
-labels ``BOY1'', ``BOY2'', and ``BOY3'' for one scene were collapsed into a
-single label ``BOY'', as the individual association with visible characters
-could not be inferred. Consequently, generic labels, such as ``BOY'' are used
-to identify any boy present in a scene, regardless whether it is the same
-person or not.
-
+However, some characters portray emotions but have no lines of dialog, in other
+instances observer chose inconsistent labels. During data curation character
+labels were therefore manually consolidated into a set of 35 categories that
+uniformize labeling across observers. The full list of character labels is shown in table
+\ref{tab:characters}. The 35 character labels were derived using the following
+rules: a) main characters and famous/familiar characters receive an individual
+labels, as do the two narrator voices; b) relatives of main characters are
+labeled according to their relation; c) all other characters are consolidated
+into generic categories that preserve gender, age (children, adults, or seniors),
+and number (individual, or group).
 
 \begin{table}
   \centering
-  \begin{tabular}{p{4cm}p{4cm}p{4cm}p{4cm}}
- Character label & Description & Character label & Description \\
- \hline\\
- ABBIE HOFFMAN & &                            LENORE & \\
- ALL AMERICAN FOOTBALL TEAM & &               LOUISE & \\
- ARMY BUS DRIVER & &                          LYNN MARIE & \\
- BILLY & &                                    MALE NURSE & \\
- BLACK PANTHER & &                            MAN & \\
- BLACK WOMAN & &                              MASAI & \\
- BOB HOPE & &                                 MEN & \\
- BOY & any unnamed boy &                                      MILITARY RECRUITER & \\
- BUBBA & &                                    MINISTER & \\
- BUBBA'S YOUNG BROTHER & &                    MRS. BLUE & \\
- BUBBAS GREAT-GRANDMOTHER & &                 MRS. GUMP & \\
- BUBBAS GREAT-GREAT-GRANDMOTHER & &           NARRATOR & \\
- BUS DRIVER & &                               NEIL ARMSTRONG & \\
- CARLA & &                                    NURSE & \\
- CHEERLEADER & &                              OFFICER & \\
- CHILD & &                                    OLD MAN & \\
- CHILDREN & &                                 OLD MEN & \\
- CHOIR & &                                    OLD SHRIMPER & \\
- CLEVELAND & &                                OLD WOMAN & \\
- CROWD & &                                    OLDER BOYS & \\
- DALLAS & &                                   PATRONS & \\
- DAN & &                                      PLAYER & \\
- DEAN & &                                     POLICEMAN & \\
- DICK CAVETT & &                              PRESIDENT JOHNSON & \\
- DICK CLARK & &                               PRESIDENT KENNEDY & \\
- DOCTOR & &                                   PRESIDENT NIXON & \\
- DOG & &                                      PRINCIPAL & \\
- DRILL SERGEANT & &                           RECRUIT & \\
- DRIVER & &                                   REPORTER & \\
- ELVIS PRESLEY & &                            REPORTERS & \\
- FOOTBALL COACH & &                            REVEREND & \\
- FORREST & &                                  ROBERT KENNEDY & \\
- FORREST \& RECRUITS & &                      RUBEN & \\
- FORREST (V.O.) & &                           SECURITY GUARD & \\
- FORREST JR. & &                              SGT. SIMS & \\
- GENERAL NATHAN BEDFORD & &                   SHOWGIRL & \\
- GIRL & &                                     SOLDIER & \\
- GUESTS & &                                   SOLDIERS & \\
- HILARY & &                                   SUSAN & \\
- HIPPIE & &                                   TAXI DRIVER & \\
- HIPPIES & &                                  TEX & \\
- ISABEL & &                                   TV ANNOUNCER & \\
- JENNY & &                                    VETERAN & \\
- JENNY'S DAD & &                              WESLEY & \\
- JENNY'S FLIRT & &                            WILD-EYED MAN & \\
- JENNY'S GRANDMOTHER & &                      WOMAN & \\
- JENNY'S LOVER & &                            WOMEN & \\
- JENNY'S ROOMMATE & &                         YOUNG HIPPIE & \\
- JOHN LENNON & &                              YOUNG PRIVATE & \\
- JUNKIE & & & \\
+  \begin{tabular}{p{4cm}p{4cm}p{3.6cm}p{4cm}}
+    \textbf{Character label} & \textbf{Description} & \textbf{Character label} & \textbf{Description} \\
+\\\hline\\
 
+\multicolumn{4}{l}{\textit{Main characters}} \\\\
+BUBBA     & Forrest's army pal & FORRESTJR & young Forrest Gump \\
+DAN       & Lt.~Dan & JENNY     & Forrest's love \\
+FORREST   & adult Forrest Gump &           & \\
+\\\hline\\
 
+\multicolumn{4}{l}{\textit{Special}} \\\\
+FORRESTVO & voice-over narrator Forrest & NARRATOR & audio-description narrator \\
+\\\hline\\
 
+\multicolumn{4}{l}{\textit{Famous characters}} \\\\
+ ABBIEHOFFMAN     & activist (lookalike actor)                   & NEILARMSTRONG    & first man on the moon (orig.~footage) \\ 
+ BOBHOPE          & entertainer (orig.~footage)                  & PRESIDENTJOHNSON & US-president (orig.~footage) \\
+ DICKCAVETT       & talk master (orig.~footage)                  & PRESIDENTKENNEDY & US-president (orig.~footage) \\
+ ELVISPRESLEY     & The King (orig.~footage and lookalike actor) & PRESIDENTNIXON   & US-president (orig.~footage)  \\
+ JOHNLENNON       & Beatle (orig.~footage)                       & ROBERTKENNEDY    & Brother of J.~F.~Kennedey (orig.~footage) \\                  & \\
+\\\hline\\
+
+\multicolumn{4}{l}{\textit{Relatives of main characters}} \\\\
+BUBBASGRGRANDMA   & Bubba's great-grandmother & JENNYSGRANDMA & Jenny's grandmother\\
+BUBBASGRGRGRANDMA & Bubba's great-great-grand\-mother & MRSBLUE       & Bubbas's mother\\
+BUBBASYOUNGBROTHER      & Bubba's young brother & MRSGUMP       & Forrest's mother \\
+JENNYSDAD               & Jenny's father &              & \\
+\\\hline\\
+
+\multicolumn{4}{l}{\textit{Generic character categories}} \\\\
+CHILDREN  & group of children & MEN      & group of men \\
+GIRL      & individual girl & OLDMEN   & group of old men \\
+BOY       & individual boy & WOMAN    & individual woman \\
+OLDERBOYS & group of older boys & OLDWOMAN & old woman\\
+MAN       & individual man & WOMEN    & group of women \\
+OLDMAN    & individual old man & CROWD    & group of people with mixed gender \\
+ \\\hline
   \end{tabular}
-  \caption{Character labels in alphabetic order TODO: finish me}
+  \caption{Consolidated character labels. Any annotation of a portrait emotion
+  is associated with exactly one of these 36 labels. While main characters,
+  their relatives, and famous characters have individual labels, all remaining
+  characters in the movie are aggregated into generic categories that preserve
+  information on gender, ange group and number.}
   \label{tab:characters}
 \end{table}
 
@@ -213,37 +196,38 @@ episodes. Based on these results we decided to make this part of the annotation
 optional and observers were instructed to assign an emotion label only if they
 saw a ``perfect'' match with any of the categories.
 
-TODO: give list of max inter-rater reliability for labels
+\hl{TODO: give list of max inter-rater reliability for labels}
 
 \begin{table}
   \centering
-  \begin{tabular}{llp{8cm}}
-    Category & Label & Description \\
-    \hline
-    Admiration & ADM & appreciation of another person or object \\
-    Anger & ANG & a response to injured respect or autonomy of a person by another one \\
-    Contempt & CON & disdain of another person or object \\
-    Disappointment & DIS & when expectations were not met \\
-    Fear & FEA & triggered by a dangerous situation \\
-    Fears confirmed & FCO & TODO: missing description \\
-    Gloating & GLO & to be happy because another person suffers \\
-    Gratification & GRA & triggered by a positive event which one owes by themselves  \\
-    Happiness & HAP & pleasant and joyful condition \\
-    Happy-for & HAF & concern in happiness of someone else \\
-    Hate & HAT & rejection of another person \\
-    Hope & HOP & a positive expectation for a person or special event in the future \\
-    Love & LOV & affection to another person \\
-    Pity/Compassion & PIT & concern in someone's suffering \\
-    Pride & PRI & a person acknowledge criteria and norms of their action \\
-    Relief & REL & a worry/negative expectation do not come to pass \\
-    Remorse & REM & triggered by a negative event initiated by themselves \\
-    Resentment & RES & to begrudge another persons property or success and want it for themselves \\
-    Sadness & SAD & emotional pain after loss or misfortune \\
-    Satisfaction & SAT & when expectations get satisfied \\
-    Shame & SHA & dissatisfaction with one's own behavior, because norms get injured \\
-    Thankfulness & THA & triggered by a positive event which one owes by another person \\
+  \begin{tabular}{lp{10cm}}
+    \textbf{Label} & \textbf{Description} \\
+    \\\hline\\
+    ADMIRATION & Appreciation of another person or object \\
+    ANGERRAGE & Response to injured respect or autonomy of a person by another one \\
+    COMPASSION & Concern in someone's suffering \\
+    CONTEMPT & Disdain of another person or object \\
+    DISAPPOINTMENT & When expectations were not met \\
+    FEAR & Triggered by a dangerous situation \\
+    FEARCONFIRMED & \hl{TODO: missing description}\\
+    GLOATING & To be happy because another person suffers \\
+    GRATIFICATION & Triggered by a positive event which one owes by themselves  \\
+    GRATITUDE & Triggered by a positive event which one owes by another person \\
+    HAPPINESS & Pleasant and joyful condition \\
+    HAPPYFOR & concern in happiness of someone else \\
+    HATE & Rejection of another person, intense dislike, or animosity \\
+    HOPE & Positive expectation for a person or special event in the future \\
+    LOVE & Affection to another person \\
+    PRIDE & Positive reflection of accomplishments and status \\
+    RELIEF & A worry/negative expectation do not come to pass \\
+    REMORSE & Triggered by a negative event initiated by themselves \\
+    RESENTMENT & Response to perceived unfair treatment \\
+    SADNESS & Emotional pain after loss or misfortune \\
+    SATISFACTION & When expectations get fulfilled \\
+    SHAME & Dissatisfaction with one's own behavior, because norms are violated \\
   \end{tabular}
-  \caption{Emotion categories}
+  \caption{List of 22 emotion categories observer could (optionally) use to
+  futher qualify the nature of a portrayed emotion.}
   \label{tab:emotion_categories}
 \end{table}
 
@@ -271,41 +255,41 @@ describes all indicator categories.
 
 \begin{table}
   \centering
-  \begin{tabular}{llp{8cm}}
-    Indicator & Label & Description \\
-    \hline
-    \textit{Onset}\\
-    Non-verbal audio & A & feelings expressed without words, for example laughing, crying, wheezing, sighing\\
-    Context & C & emotion portrayed through context information and not directly by a character, for example a social rejection of an individual by a group without visible emotional response\\
-    Gesture & G & body language cues \\
-    Mimic & M & facial expressions \\
-    Narrator & N & description of an emotion given by the narrator (only for audio stimulus)\\
-    Verbal & V & emotion expressed through words either as a direct description (e.g. a self-report) or by means of a particular choice of words (e.g. harsh language)\\
+  \begin{tabular}{lp{10cm}}
+    \textbf{Label} & \textbf{Description} \\
+    \\\hline\\
+    \textit{Onset}\\\\
+    AUDIO & Non-verbal audio cues, feelings expressed without words, for example laughing, crying, wheezing, sighing\\
+    CONTEXT & Emotion portrayed through context information and not directly by a character, for example a social rejection of an individual by a group without visible emotional response\\
+    GESTURE & Body language cues \\
+    FACE & Facial expressions \\
+    NARRATOR & Description of an emotion given by the narrator (only for audio stimulus)\\
+    VERBAL & Emotion expressed through words either as a direct description (e.g. a self-report) or by means of a particular choice of words (e.g. harsh language)\\
     \\
-    \textit{Offset}\\
-    Emotion changes & E & an emotion is replaced by another, different emotion \\
-    Emotion fades & F & change to an emotion neutral state \\
-    Character leaves & L & character leaves a scene (no further evidence for an emotion)\\
-    Scene ends & S & a scene transition with a change of time or location indicates the end of an emotion\\
+    \textit{Offset}\\\\
+    EMOCHANGE & Present emotion is replaced by another, different emotion \\
+    EMOFADED & Emotion fades with a change to an emotion neutral state \\
+    CHARLEFT & Character leaves a scene (no further evidence for an emotion)\\
+    SCENEEND & Scene transition with a change of time or location indicates the end of an emotion\\
 
   \end{tabular}
-  \caption{Indicator categories for emotion onset and offset}
+  \caption{Categories for cues indicating the onset or offset of an emotion.}
   \label{tab:onoffset_indicators}
 \end{table}
 
-TODO: are there annotations that do not contain indicators specifications
+\hl{TODO: are there annotations that do not contain indicators specifications?}
 
 \subsection*{Data file organization}
 
-TODO: describe raw data layout, once final
+\hl{TODO: describe raw data layout, once final}
 
 \subsection*{Time stamp conversion}
 
 \begin{table}
   \centering
   \begin{tabular}{lrrrr}
-  \#  & Start  & End    & Duration& Boundary \\
-  \hline
+    \textbf{\#}  & \textbf{Start}  & \textbf{End}    & \textbf{Duration}& \textbf{Boundary} \\
+  \\\hline\\
    0  & 0.0    & 902.0  & 902.0  & 891.2    \\
    1  & 886.0  & 1768.0 & 882.0  & 1759.2   \\
    2  & 1752.0 & 2628.0 & 876.0  & 2618.8   \\
