@@ -54,16 +54,17 @@ students (all female), the audio-only group comprised \AOTotalRaters\ students
 
 \subsection*{Procedure}
 
-Annotations were performed using Advene\cite{AP2005}, a dedicated open-source
-video annotation tool that offers convenient navigation of structural units of
-the stimulus and provided uniform position information in milliseconds.  Each
-observer annotated all of 205 previously identified movie scenes in an
-individual random order to minimize ``carry-over'' effects and help observers
-to focus on current indicators of portrayed emotions in contrast to more slowly
-changing characteristics, such as mood, or other biases introduced by the movie
-plot. Scenes were used as units for annotation, because transitions between
-them typically involve a change of location or fast progression of time that
-make persistence of the nature of portrayed emotions across scenes less likely.
+Annotations were performed with the help of Advene\cite{AP2005}, a dedicated
+open-source video annotation tool that offers convenient navigation of
+structural units of the stimulus and provided uniform position information in
+milliseconds.  Each observer annotated all of 205 previously identified movie
+scenes in an individual random order to minimize ``carry-over'' effects and
+help observers to focus on current indicators of portrayed emotions in contrast
+to more slowly changing characteristics, such as mood, or other biases
+introduced by the movie plot. Scenes were used as units for annotation, because
+transitions between them typically involve a change of location or fast
+progression of time that make persistence of the nature of portrayed emotions
+across scenes less likely.
 
 Observers were instructed to work alone in a setting free of distractions, and
 to use headphones for optimal saliency of the stimulus. There was no strict
@@ -72,6 +73,11 @@ informed to stop working for any number of breaks whenever they could no longer
 guarantee a high level of attention for the task. Sessions were typically
 spread over multiple days over the course of three weeks. On average, observers
 required around 30 hours each to complete the annotation.
+
+\hl{TODO we need 2-3 sentences explaining the workflow between advene and the
+spreadsheet application. Most readers probably do not know advene. What did
+advene contribute? How often did you look at a scene? once? twice? once per
+variable?}
 
 \subsection*{Annotation content}
 
@@ -112,10 +118,11 @@ expressions, body language cues, context information, verbal and non-verbal
 audio cues. Observers could record multiple onset indicators. Despite the term
 ``onset'' these indicators did not all have to be present at the very beginning
 of an emotional episode. For example, an extended period of sadness could start
-with a facial expression and later on add a congruent body language cue. In that case the respective abbreviations had to appear in alphabetical order in the "onset indicators" column. In
-the audio-movie stimulus the narrator was frequently the only source of
-information regarding the emotional state of a character, hence we included a
-dedicated category for this scenario.
+with a facial expression and later on add a congruent body language cue. In
+that case the respective labels were aggregated in the "onset indicators"
+column. In the audio-movie stimulus the narrator was frequently the only source
+of information regarding the emotional state of a character, hence we included
+a dedicated category for this scenario.
 
 In addition to onset indicators, observers also recorded the type of evidence
 for the end of an emotional episode. Four conditions were distinguished: 1) the
@@ -126,27 +133,30 @@ describes all indicator categories.
 
 \begin{table}
   \centering
-  \begin{tabular}{llp{8cm}}
-    Indicator & Label & Description \\
-    \hline
-    \textit{Onset}\\
-    Non-verbal audio & A & feelings expressed without words, for example laughing, crying, wheezing, sighing\\
-    Context & C & emotion portrayed through context information and not directly by a character, for example a social rejection of an individual by a group without visible emotional response\\
-    Gesture & G & body language cues \\
-    Mimic & M & facial expressions \\
-    Narrator & N & description of an emotion given by the narrator (only for audio stimulus)\\
-    Verbal & V & emotion expressed through words either as a direct description (e.g. a self-report) or by means of a particular choice of words (e.g. harsh language)\\
+  \begin{tabular}{lp{10cm}}
+    \textbf{Label} & \textbf{Description} \\
+    \\\hline\\
+    \textit{Onset}\\\\
+    AUDIO & Non-verbal audio cues, feelings expressed without words, for example laughing, crying, wheezing, sighing\\
+    CONTEXT & Emotion portrayed through context information and not directly by a character, for example a social rejection of an individual by a group without visible emotional response\\
+    GESTURE & Body language cues \\
+    FACE & Facial expressions \\
+    NARRATOR & Description of an emotion given by the narrator (only for audio stimulus)\\
+    VERBAL & Emotion expressed through words either as a direct description (e.g. a self-report) or by means of a particular choice of words (e.g. harsh language)\\
     \\
-    \textit{Offset}\\
-    Emotion changes & E & an emotion is replaced by another, different emotion \\
-    Emotion fades & F & change to an emotion neutral state \\
-    Character leaves & L & character leaves a scene (no further evidence for an emotion)\\
-    Scene ends & S & a scene transition with a change of time or location indicates the end of an emotion\\
+    \textit{Offset}\\\\
+    EMOCHANGE & Present emotion is replaced by another, different emotion \\
+    EMOFADED & Emotion fades with a change to an emotion neutral state \\
+    CHARLEFT & Character leaves a scene (no further evidence for an emotion)\\
+    SCENEEND & Scene transition with a change of time or location indicates the end of an emotion\\
 
   \end{tabular}
-  \caption{Indicator categories for emotion onset and offset}
+  \caption{Categories for cues indicating the onset or offset of an emotion.}
   \label{tab:onoffset_indicators}
 \end{table}
+
+\hl{TODO: are there annotations that do not contain indicators specifications?}
+
 
 \paragraph{Character label}
 
@@ -272,44 +282,11 @@ saw a ``perfect'' match with any of the categories.
     SHAME & Dissatisfaction with one's own behavior, because norms are violated \\
   \end{tabular}
   \caption{List of 22 emotion categories observer could (optionally) use to
-  futher qualify the nature of a portrayed emotion.}
+    futher qualify the nature of a portrayed emotion. \hl{TODO: doublecheck descriptions}}
   \label{tab:emotion_categories}
 \end{table}
 
 
-
-In addition to onset indicators, observers also recorded the type of evidence
-for the end of an emotional episode. Four conditions were distinguished: 1) the
-change from one emotion to another, 2) entering a neutral emotional state, 3) a
-character leaving an ongoing scene with no further evidence for its emotional
-state, and 4) the end of a scene.  Table \ref{tab:onoffset_indicators}
-describes all indicator categories.
-
-\begin{table}
-  \centering
-  \begin{tabular}{lp{10cm}}
-    \textbf{Label} & \textbf{Description} \\
-    \\\hline\\
-    \textit{Onset}\\\\
-    AUDIO & Non-verbal audio cues, feelings expressed without words, for example laughing, crying, wheezing, sighing\\
-    CONTEXT & Emotion portrayed through context information and not directly by a character, for example a social rejection of an individual by a group without visible emotional response\\
-    GESTURE & Body language cues \\
-    FACE & Facial expressions \\
-    NARRATOR & Description of an emotion given by the narrator (only for audio stimulus)\\
-    VERBAL & Emotion expressed through words either as a direct description (e.g. a self-report) or by means of a particular choice of words (e.g. harsh language)\\
-    \\
-    \textit{Offset}\\\\
-    EMOCHANGE & Present emotion is replaced by another, different emotion \\
-    EMOFADED & Emotion fades with a change to an emotion neutral state \\
-    CHARLEFT & Character leaves a scene (no further evidence for an emotion)\\
-    SCENEEND & Scene transition with a change of time or location indicates the end of an emotion\\
-
-  \end{tabular}
-  \caption{Categories for cues indicating the onset or offset of an emotion.}
-  \label{tab:onoffset_indicators}
-\end{table}
-
-\hl{TODO: are there annotations that do not contain indicators specifications?}
 
 \subsection*{Data file organization}
 
