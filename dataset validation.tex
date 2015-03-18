@@ -73,52 +73,116 @@ onset cues for all six distinguished cue types.
     (minimum \AVAggThresh\ inter-rater agreement) for both stimulus types.}
   \label{fig:threshlabeledoncue}
 \end{figure}
-
-
 \begin{table}
   \centering
-  \begin{tabular}{p{26mm}cccccc}
+  \begin{tabular}{p{18mm}cccccc}
     & \multicolumn{2}{c}{\textbf{All characters}} & \multicolumn{2}{c}{\textbf{Forrest-only}} & \multicolumn{2}{c}{\textbf{Jenny-only}} \\
     & \textbf{Audio-visual} & \textbf{Audio-only} & \textbf{Audio-visual} & \textbf{Audio-only} & \textbf{Audio-visual} & \textbf{Audio-only} \\
     \\\hline\\
-    \multicolumn{7}{l}{\textit{Intra-stimulus inter-observer consistency}} \\\\
     Arousal & \AVInterRaterConsistArousalAllChar & \AOInterRaterConsistArousalAllChar & \AVInterRaterConsistArousalForrest & \AOInterRaterConsistArousalForrest & \AVInterRaterConsistArousalJenny & \AOInterRaterConsistArousalJenny \\
     Valence & \AVInterRaterConsistValenceAllChar & \AOInterRaterConsistValenceAllChar & \AVInterRaterConsistValenceForrest & \AOInterRaterConsistValenceForrest & \AVInterRaterConsistValenceJenny & \AOInterRaterConsistValenceJenny \\
     Direction & \AVInterRaterConsistDirectionAllChar & \AOInterRaterConsistDirectionAllChar & \AVInterRaterConsistDirectionForrest & \AOInterRaterConsistDirectionForrest & \AVInterRaterConsistDirectionJenny & \AOInterRaterConsistDirectionJenny \\
     \\\hline\\
-    \multicolumn{7}{l}{\textit{Intra-stimulus indicator correlation}} \\\\
-    Arousal-Valence & \AVCorrArousalValenceAllChar & \AOCorrArousalValenceAllChar & \AVCorrArousalValenceForrest & \AOCorrArousalValenceForrest & \AVCorrArousalValenceJenny & \AOCorrArousalValenceJenny \\
-    Arousal-Direction & \AVCorrArousalDirectionAllChar & \AOCorrArousalDirectionAllChar & \AVCorrArousalDirectionForrest & \AOCorrArousalDirectionForrest & \AVCorrArousalDirectionJenny & \AOCorrArousalDirectionJenny \\
-    Valence-Direction & \AVCorrValenceDirectionAllChar & \AOCorrValenceDirectionAllChar & \AVCorrValenceDirectionForrest & \AOCorrValenceDirectionForrest & \AVCorrValenceDirectionJenny & \AOCorrValenceDirectionJenny \\
-    \\\hline\\
-    \multicolumn{7}{l}{\textit{Inter-stimulus indicator correlation}} \\\\
-    Arousal & \multicolumn{2}{c}{\InterModCorrArousalAllChar} &\multicolumn{2}{c}{\InterModCorrArousalForrest}&\multicolumn{2}{c}{\InterModCorrArousalJenny}\\
-    Valence & \multicolumn{2}{c}{\InterModCorrValenceAllChar} &\multicolumn{2}{c}{\InterModCorrValenceForrest}&\multicolumn{2}{c}{\InterModCorrValenceJenny}\\
-    Direction & \multicolumn{2}{c}{\InterModCorrDirectionAllChar} &\multicolumn{2}{c}{\InterModCorrDirectionForrest}&\multicolumn{2}{c}{\InterModCorrDirectionJenny}\\
-    \\\hline
 
+    Admiration     & \AVInterRaterConsistADMIRATIONAllChar     & \AOInterRaterConsistADMIRATIONAllChar     &\AVInterRaterConsistADMIRATIONForrest     &\AOInterRaterConsistADMIRATIONForrest     &\AVInterRaterConsistADMIRATIONJenny     &\AOInterRaterConsistADMIRATIONJenny     \\
+    Anger/Rage     & \AVInterRaterConsistANGERRAGEAllChar      & \AOInterRaterConsistANGERRAGEAllChar      &\AVInterRaterConsistANGERRAGEForrest      &\AOInterRaterConsistANGERRAGEForrest      &\AVInterRaterConsistANGERRAGEJenny      &\AOInterRaterConsistANGERRAGEJenny      \\
+    Compassion     & \AVInterRaterConsistCOMPASSIONAllChar     & \AOInterRaterConsistCOMPASSIONAllChar     &\AVInterRaterConsistCOMPASSIONForrest     &\AOInterRaterConsistCOMPASSIONForrest     &\AVInterRaterConsistCOMPASSIONJenny     &\AOInterRaterConsistCOMPASSIONJenny     \\
+    Contempt       & \AVInterRaterConsistCONTEMPTAllChar       & \AOInterRaterConsistCONTEMPTAllChar       &\AVInterRaterConsistCONTEMPTForrest       &\AOInterRaterConsistCONTEMPTForrest       &\AVInterRaterConsistCONTEMPTJenny       &\AOInterRaterConsistCONTEMPTJenny       \\
+    Disappoint. & \AVInterRaterConsistDISAPPOINTMENTAllChar & \AOInterRaterConsistDISAPPOINTMENTAllChar &\AVInterRaterConsistDISAPPOINTMENTForrest &\AOInterRaterConsistDISAPPOINTMENTForrest &\AVInterRaterConsistDISAPPOINTMENTJenny &\AOInterRaterConsistDISAPPOINTMENTJenny \\
+    Fear           & \AVInterRaterConsistFEARAllChar           & \AOInterRaterConsistFEARAllChar           &\AVInterRaterConsistFEARForrest           &\AOInterRaterConsistFEARForrest           &\AVInterRaterConsistFEARJenny           &\AOInterRaterConsistFEARJenny           \\
+    Gloating       & \AVInterRaterConsistGLOATINGAllChar       & \AOInterRaterConsistGLOATINGAllChar       &\AVInterRaterConsistGLOATINGForrest       &\AOInterRaterConsistGLOATINGForrest       &\AVInterRaterConsistGLOATINGJenny       &\AOInterRaterConsistGLOATINGJenny       \\
+    Gratification  & \AVInterRaterConsistGRATIFICATIONAllChar  & \AOInterRaterConsistGRATIFICATIONAllChar  &\AVInterRaterConsistGRATIFICATIONForrest  &\AOInterRaterConsistGRATIFICATIONForrest  &\AVInterRaterConsistGRATIFICATIONJenny  &\AOInterRaterConsistGRATIFICATIONJenny  \\
+    Gratitude      & \AVInterRaterConsistGRATITUDEAllChar      & \AOInterRaterConsistGRATITUDEAllChar      &\AVInterRaterConsistGRATITUDEForrest      &\AOInterRaterConsistGRATITUDEForrest      &\AVInterRaterConsistGRATITUDEJenny      &\AOInterRaterConsistGRATITUDEJenny      \\
+    Happiness      & \AVInterRaterConsistHAPPINESSAllChar      & \AOInterRaterConsistHAPPINESSAllChar      &\AVInterRaterConsistHAPPINESSForrest      &\AOInterRaterConsistHAPPINESSForrest      &\AVInterRaterConsistHAPPINESSJenny      &\AOInterRaterConsistHAPPINESSJenny      \\
+    Happy-for      & \AVInterRaterConsistHAPPYFORAllChar       & \AOInterRaterConsistHAPPYFORAllChar       &\AVInterRaterConsistHAPPYFORForrest       &\AOInterRaterConsistHAPPYFORForrest       &\AVInterRaterConsistHAPPYFORJenny       &\AOInterRaterConsistHAPPYFORJenny       \\
+    Hate           & \AVInterRaterConsistHATEAllChar           & \AOInterRaterConsistHATEAllChar           &\AVInterRaterConsistHATEForrest           &\AOInterRaterConsistHATEForrest           &\AVInterRaterConsistHATEJenny           &\AOInterRaterConsistHATEJenny           \\
+    Hope           & \AVInterRaterConsistHOPEAllChar           & \AOInterRaterConsistHOPEAllChar           &\AVInterRaterConsistHOPEForrest           &\AOInterRaterConsistHOPEForrest           &\AVInterRaterConsistHOPEJenny           &\AOInterRaterConsistHOPEJenny           \\
+    Love           & \AVInterRaterConsistLOVEAllChar           & \AOInterRaterConsistLOVEAllChar           &\AVInterRaterConsistLOVEForrest           &\AOInterRaterConsistLOVEForrest           &\AVInterRaterConsistLOVEJenny           &\AOInterRaterConsistLOVEJenny           \\
+    Pride          & \AVInterRaterConsistPRIDEAllChar          & \AOInterRaterConsistPRIDEAllChar          &\AVInterRaterConsistPRIDEForrest          &\AOInterRaterConsistPRIDEForrest          &\AVInterRaterConsistPRIDEJenny          &\AOInterRaterConsistPRIDEJenny          \\
+    Relief         & \AVInterRaterConsistRELIEFAllChar         & \AOInterRaterConsistRELIEFAllChar         &\AVInterRaterConsistRELIEFForrest         &\AOInterRaterConsistRELIEFForrest         &\AVInterRaterConsistRELIEFJenny         &\AOInterRaterConsistRELIEFJenny         \\
+    Remorse        & \AVInterRaterConsistREMORSEAllChar        & \AOInterRaterConsistREMORSEAllChar        &\AVInterRaterConsistREMORSEForrest        &\AOInterRaterConsistREMORSEForrest        &\AVInterRaterConsistREMORSEJenny        &\AOInterRaterConsistREMORSEJenny        \\
+    Resentment     & \AVInterRaterConsistRESENTMENTAllChar     & \AOInterRaterConsistRESENTMENTAllChar     &\AVInterRaterConsistRESENTMENTForrest     &\AOInterRaterConsistRESENTMENTForrest     &\AVInterRaterConsistRESENTMENTJenny     &\AOInterRaterConsistRESENTMENTJenny     \\
+    Sadness        & \AVInterRaterConsistSADNESSAllChar        & \AOInterRaterConsistSADNESSAllChar        &\AVInterRaterConsistSADNESSForrest        &\AOInterRaterConsistSADNESSForrest        &\AVInterRaterConsistSADNESSJenny        &\AOInterRaterConsistSADNESSJenny        \\
+    Satisfaction   & \AVInterRaterConsistSATISFACTIONAllChar   & \AOInterRaterConsistSATISFACTIONAllChar   &\AVInterRaterConsistSATISFACTIONForrest   &\AOInterRaterConsistSATISFACTIONForrest   &\AVInterRaterConsistSATISFACTIONJenny   &\AOInterRaterConsistSATISFACTIONJenny   \\
+    Shame          & \AVInterRaterConsistSHAMEAllChar          & \AOInterRaterConsistSHAMEAllChar          &\AVInterRaterConsistSHAMEForrest          &\AOInterRaterConsistSHAMEForrest          &\AVInterRaterConsistSHAMEJenny          &\AOInterRaterConsistSHAMEJenny          \\\\                  
+    \hline
+ 
+
+%    \multicolumn{7}{l}{\textit{Intra-stimulus indicator correlation}} \\\\
+%    Arousal-Valence & \AVCorrArousalValenceAllChar & \AOCorrArousalValenceAllChar & \AVCorrArousalValenceForrest & \AOCorrArousalValenceForrest & \AVCorrArousalValenceJenny & \AOCorrArousalValenceJenny \\
+%    Arousal-Direction & \AVCorrArousalDirectionAllChar & \AOCorrArousalDirectionAllChar & \AVCorrArousalDirectionForrest & \AOCorrArousalDirectionForrest & \AVCorrArousalDirectionJenny & \AOCorrArousalDirectionJenny \\
+%    Valence-Direction & \AVCorrValenceDirectionAllChar & \AOCorrValenceDirectionAllChar & \AVCorrValenceDirectionForrest & \AOCorrValenceDirectionForrest & \AVCorrValenceDirectionJenny & \AOCorrValenceDirectionJenny \\
+%    \\\hline\\
   \end{tabular}
 
-  \caption{Observation consistency estimates. All values are Pearson
+  \caption{
+    Intra-stimulus inter-observer consistency. All values are Pearson
     correlation coefficients for \unit[1]{Hz} modulations of the fraction of
     inter-observer agreement (as, for example, depicted in figure
     \ref{fig:indicatortsallchar}) with respect to a particular emotion
     attribute across the entire duration of the movie. The specified range
-    corresponds to the width of the 95\% confidence interval of the estimate
-    (mean value or correlation coefficient via Fisher transformation).
+    corresponds to the width of the 95\% confidence interval of the mean correlation
+    for all possible combinations of partitioning observers into two sub-groups (audio-visual
+    4~vs.~5; audio-only 1~vs~2). Higher correlations indicate higher consistency
+    of aggreement modulations across observer sub-groups.
     The \textit{all characters} column indicates the agreement for a particular
     emotion attribute over time irrespective of the annotated character. The
     columns on the right show the corresponding correlations for the two main
-    characters. \textit{Intra-stimulus inter-observer consistency} refers to
-    the mean correlation of agreement time courses for all possible
-    combinations of partitioning observers into two sub-groups (audio-visual
-    4~vs.~5; audio-only 1~vs~2). Higher correlations indicate higher consistency
-    of aggreement modulations across observer sub-groups. \textit{Intra-stimulus
-    indicator correlation} refers to the correlation of agreement modulations
+    characters.}
+  \label{tab:interobserver_consistency}
+\end{table}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figures/bigcorr}
+  \caption{Intra-stimulus indicator correlation refers to the correlation of agreement modulations
     across the full set of observers for two different emotion attributes.
-    \textit{Inter-stimulus indicator correlation} indicates the consistency
-    between agreement modulations across movie types (audio-visual; audio-only)
-  and, consequently, across independent groups of observers. }
+ }
+  \label{fig:intrastimcorrelation}
+\end{figure}
+
+\begin{table}
+  \centering
+  \begin{tabular}{p{26mm}ccc}
+    & \textbf{All characters} & \textbf{Forrest-only} & \textbf{Jenny-only} \\
+    \hline \\
+    Arousal & \InterModCorrArousalAllChar &\InterModCorrArousalForrest &\InterModCorrArousalJenny \\
+    Valence & \InterModCorrValenceAllChar &\InterModCorrValenceForrest &\InterModCorrValenceJenny \\
+    Direction & \InterModCorrDirectionAllChar &\InterModCorrDirectionForrest &\InterModCorrDirectionJenny \\\\
+
+    Admiration & \InterModCorrADMIRATIONAllChar &\InterModCorrADMIRATIONForrest &\InterModCorrADMIRATIONJenny \\
+    Anger/Rage & \InterModCorrANGERRAGEAllChar &\InterModCorrANGERRAGEForrest &\InterModCorrANGERRAGEJenny \\
+    Compassion & \InterModCorrCOMPASSIONAllChar &\InterModCorrCOMPASSIONForrest &\InterModCorrCOMPASSIONJenny \\
+    Contempt & \InterModCorrCONTEMPTAllChar &\InterModCorrCONTEMPTForrest &\InterModCorrCONTEMPTJenny \\
+    Disappointment & \InterModCorrDISAPPOINTMENTAllChar &\InterModCorrDISAPPOINTMENTForrest &\InterModCorrDISAPPOINTMENTJenny \\
+    Fear & \InterModCorrFEARAllChar &\InterModCorrFEARForrest &\InterModCorrFEARJenny \\
+    Gloating & \InterModCorrGLOATINGAllChar &\InterModCorrGLOATINGForrest &\InterModCorrGLOATINGJenny \\
+    Gratification & \InterModCorrGRATIFICATIONAllChar &\InterModCorrGRATIFICATIONForrest &\InterModCorrGRATIFICATIONJenny \\
+    Gratitude & \InterModCorrGRATITUDEAllChar &\InterModCorrGRATITUDEForrest &\InterModCorrGRATITUDEJenny \\
+    Happiness & \InterModCorrHAPPINESSAllChar &\InterModCorrHAPPINESSForrest &\InterModCorrHAPPINESSJenny \\
+    Happy-for & \InterModCorrHAPPYFORAllChar &\InterModCorrHAPPYFORForrest &\InterModCorrHAPPYFORJenny \\
+    Hate & \InterModCorrHATEAllChar &\InterModCorrHATEForrest &\InterModCorrHATEJenny \\
+    Hope & \InterModCorrHOPEAllChar &\InterModCorrHOPEForrest &\InterModCorrHOPEJenny \\
+    Love & \InterModCorrLOVEAllChar &\InterModCorrLOVEForrest &\InterModCorrLOVEJenny \\
+    Pride & \InterModCorrPRIDEAllChar &\InterModCorrPRIDEForrest &\InterModCorrPRIDEJenny \\
+    Relief & \InterModCorrRELIEFAllChar &\InterModCorrRELIEFForrest &\InterModCorrRELIEFJenny \\
+    Remorse & \InterModCorrREMORSEAllChar &\InterModCorrREMORSEForrest &\InterModCorrREMORSEJenny \\
+    Resentment & \InterModCorrRESENTMENTAllChar &\InterModCorrRESENTMENTForrest &\InterModCorrRESENTMENTJenny \\
+    Sadness & \InterModCorrSADNESSAllChar &\InterModCorrSADNESSForrest &\InterModCorrSADNESSJenny \\
+    Satisfaction & \InterModCorrSATISFACTIONAllChar &\InterModCorrSATISFACTIONForrest &\InterModCorrSATISFACTIONJenny \\
+    Shame & \InterModCorrSHAMEAllChar &\InterModCorrSHAMEForrest &\InterModCorrSHAMEJenny \\
+    \\\hline
+
+  \end{tabular}
+
+  \caption{ Inter-stimulus indicator correlation. All values are Pearson
+    correlation coefficients of \unit[1]{Hz} modulations of the fraction of
+    inter-observer agreement (as, for example, depicted in figure
+    \ref{fig:indicatortsallchar}) for the two stimulus types (audio-visual and
+  audio-only movie). The specified range corresponds to the width of the 95\%
+confidence interval of correlation coefficient (computed via Fisher
+transformation).}
 
 
   \label{tab:interobserver_consistency}
