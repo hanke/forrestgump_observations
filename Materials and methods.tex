@@ -290,9 +290,43 @@ saw a ``perfect'' match with any of the categories.
 
 \subsection*{Data file organization}
 
-\hl{TODO: describe raw data layout, once final}
+In order to maximize utility of the annotations they are released in full, and
+not only as aggregate information. The annotations from each observer are
+available in an individual plain text file with comma-separated value (CSV)
+markup. This file format facilitates import and further processing in virtually
+any software application that supports data in tabular form. The filenames
+indicate the annotated stimulus type (prefix \texttt{av} for the audio-visual
+movie and \texttt{ao} for the audio-only movie), as well as the observer
+identity.
+
+Each file contains nine columns that correspond to the annotation properties
+described above. \texttt{start})~start and \texttt{end})~end time of an emotion
+episode, reported in seconds from the start of the movie; \texttt{character})~a
+single character label from the set shown in table \ref{tab:characters}
+indication the character portraying the emotion; \texttt{arousal})~state of
+arousal indicated with the labels \texttt{LOW} or \texttt{HIGH};
+\texttt{valence})~emotional valence indicated with the label \texttt{POS} or
+\texttt{NEG}; \texttt{direction})~direction of the emotion indicated with the
+labels \texttt{SELF} or \texttt{OTHER}; \texttt{emotion})~a space-separate list
+of emotion labels from the set shown in table \ref{tab:emotion_categories};
+\texttt{oncue})~a space-separated list of onset indicators for a portrayed
+emotion from the set shown in table \ref{tab:onoffset_indicators}; and
+\texttt{offcue})~a space-separated list of offset indicators from the set also
+shown in table \ref{tab:onoffset_indicators}.  The first six columns contain
+mandatory information that is present for all annotations. The remaining
+columns contain optional attributes and can be empty.
 
 \subsection*{Time stamp conversion}
+
+To be able to use the provided emotion annotations for an analysis of
+functional data (fMRI, respiratory and cardiac trace) acquired using the
+procedure described in~\cite{HBI+14} timing information has to be converted,
+because data were recorded in eight sessions using partially overlapping
+segments of the movie. Table \ref{tab:timing} specifies the location of these
+segments with respect to the timing of the unsegmented movie used for emotion
+annotation. Subtracting movie segment start times from annotation time stamps
+yields valid relative time stamps with respect to the time series of the
+available functional data.
 
 \begin{table}
   \centering
@@ -318,9 +352,9 @@ saw a ``perfect'' match with any of the categories.
   \label{tab:timing}
 \end{table}
 
-\paragraph{Jokes}
-Finally, we also annotated jokes during the movie, defining them as scenes or lines that were intended to be funny and make the audience laugh. Jokes were annotated only in their duration and marked with the abbreviation JOK in the emotion column. 
-
+%\paragraph{Jokes}
+%Finally, we also annotated jokes during the movie, defining them as scenes or lines that were intended to be funny and make the audience laugh. Jokes were annotated only in their duration and marked with the abbreviation JOK in the emotion column. 
+%
 
 % Raters
 % 
