@@ -1,23 +1,4 @@
 \section*{Materials and methods} 
-%Please provide a detailed account of the methods and materials used for the study in order to allow replication by other researchers.
-%Please include \begin{itemize}
-%\item 
-%the source of all samples, reagents, antibodies etc.
-%\item 
-% how samples were selectedwhat exclusions were made, if any;
-%\item 
-%what was being measured
-%\item 
-%for processed data, any software used to process the data and, where possible, the source code should be made openly available.\item 
-
-%allowances made, if any, for controlling bias or unwanted sources of variability.
-%Limitations of the datasets.\item 
-
-%acronyms and abbreviations must be explained
-%\end{itemize}
-
-%Detailed description of the observation setup. QA statistics do not go here,
-%but the "Dataset validation" section.
 
 \subsection*{Stimulus}
 
@@ -27,40 +8,40 @@ variants of this movie were annotated separately. The first one was a German
 audio-description as broadcast as an additional audio track for visually
 impaired listeners on Swiss public television (Koop, Michalski, Beckmann,
 Meinhardt \& Benecke produced by Bayrischer Rundfunk, 2009). This audio-only
-stimulus was the same as the one used in \cite[contains instructions on how to
-reproduce the stimulus from the DVD release]{HBI+14}, and is largely
+stimulus was the same as the one used in~\cite{HBI+14}, and is largely
 identical to the dubbed German soundtrack of the movie except for interspersed
 narrations by a male speaker who describes the visual content of a scene. These
 descriptions take place when there is no dialog, off-screen speech, or other
 relevant audio-content in the movie. The second variant is the audio-visual
-movie with the original dubbed German soundtrack (without narrations) and the
-exact same timing (and cut scenes) as the audio-only version.
+movie with the original dubbed German soundtrack (without additional
+narrations) and the exact same timing (and cut scenes) as the audio-only
+version \cite[contains instructions on how to reproduce the stimulus from the
+DVD release]{HBI+14}.
 
 \hl{TODO: include script for blueray conversion}
 
 \subsection*{Observers}
 
 Annotations were created by the authors themselves as part of a practical
-course on scientific observation. A total of \AVTotalRaters +\AOTotalRaters
-\hl{TODO} students at the Otto-von-Guericke-University in Magdeburg, Germany
-participated in this effort and received course credit.  Based on personal
-preference, students assigned themselves to one of two groups tasked with the
-annotation of portrayed emotion in either the audio-visual movie, or the
-audio-only version. The audio-visual group consisted of \AVTotalRaters\
-students (all female), the audio-only group comprised \AOTotalRaters\ students
-(all male).
-
-\hl{TODO: add a note on gender distribution in the discussion}
+course on scientific observation. A total of 12 students at the
+Otto-von-Guericke-University in Magdeburg, Germany participated in this effort
+and received course credit.  Based on personal preference, students assigned
+themselves to one of two groups tasked with the annotation of portrayed emotion
+in either the audio-visual movie, or the audio-only version. The audio-visual
+group consisted of \AVTotalRaters\ students (all female), the audio-only group
+comprised \AOTotalRaters\ students (all male). This gender bias could have had
+an impact on the perceived emotions.  None of the observers participated in the
+previous brain imaging study~\cite{HBI+14}.
 
 \subsection*{Procedure}
 
 Annotations were performed with the help of Advene\cite{AP2005}, a dedicated
 open-source video annotation tool that offers convenient navigation of
-structural units of the stimulus and provided uniform position information in
-milliseconds.  Each observer annotated all of 205 previously identified movie
-scenes in an individual random order to minimize ``carry-over'' effects and
-help observers to focus on current indicators of portrayed emotions in contrast
-to more slowly changing characteristics, such as mood, or other biases
+structural units of the stimulus and provided uniform position information with
+sub-second precision.  Each observer annotated all of 205 previously identified
+movie scenes in an individual random order to minimize ``carry-over'' effects
+and help observers focus on current indicators of portrayed emotions in
+contrast to more slowly changing characteristics, such as mood, or other biases
 introduced by the movie plot. Scenes were used as units for annotation, because
 transitions between them typically involve a change of location or fast
 progression of time that make persistence of the nature of portrayed emotions
@@ -89,16 +70,17 @@ identified indicators for the start and end of an emotion. Each of these
 variables are described in more detail in the remainder of this section. In
 addition, observers also recorded the index of the scene containing a
 respective emotion. This variable was only used for error detection (mismatch
-of emotion duration with the start and end time of a scene).
+of emotion duration with the start and end time of a scene) and is not included
+in the published dataset.
 
 \paragraph{Start and end time}
 
 The start time identifies the onset of the first observed indicator of an
 emotion. Likewise, the end time corresponds to the offset of an emotion,
-defined as the time were no evidence indicating an emotion is present anymore.
+defined as the time where no evidence for an emotion is present anymore.
 Observers were instructed to aggregate short segments of uniform emotional
 episodes into a single annotation. For example, if a character was happy and
-smiling throughout a long period in a scene, the annotation would span all the
+smiling throughout a long period in a scene, the episode would span all the
 time from the beginning to the end of the smile even if the character's face was
 not visible the entire period, as long as no evidence of a change of emotion
 was found.  All times are reported in seconds. Although Advene offers time
@@ -106,37 +88,34 @@ stamps with the precision of the movie frame rate (25 frames per second),
 pre-tests revealed that the temporal accuracy of human observers for complex
 emotion indicators, like a developing facial expression, is much coarser. In
 order to reduce the chance of unrecoverable typos in the time stamps, observers
-were instructed to record timing information as the integer portion of the time
-in seconds only.
+were instructed to record timing information with second-precision only.
 
-\paragraph{Onset and offset indicators}
+\paragraph{Onset and offset cues}
 
-Indicators of emotion onset and offset further characterize the nature of a
-portrayed emotion. Onset indicators describe what kind of evidence for an
-emotion was detected in the movie stimulus. We distinguished facial
-expressions, body language cues, context information, verbal and non-verbal
-audio cues. Observers could record multiple onset indicators. Despite the term
-``onset'' these indicators did not all have to be present at the very beginning
-of an emotional episode. For example, an extended period of sadness could start
-with a facial expression and later on add a congruent body language cue. In
-that case the respective labels were aggregated in the "onset indicators"
-column. In the audio-movie stimulus the narrator was frequently the only source
-of information regarding the emotional state of a character, hence we included
-a dedicated category for this scenario.
+Onset indicators describe what kind of evidence for an emotion was detected in
+the movie stimulus. We distinguished facial expressions, gestures or body
+language, context information, verbal and non-verbal audio cues. Observers
+could record multiple onset indicators. Despite the term ``onset'' these
+indicators did not all have to be present at the very beginning of an emotional
+episode. For example, an extended period of sadness could start with a facial
+expression and later on add a congruent body language cue. In that case the
+respective labels were aggregated into a list. In the audio-movie stimulus the
+narrator was frequently the only source of information regarding the emotional
+state of a character, hence we included a dedicated category for this scenario.
 
 In addition to onset indicators, observers also recorded the type of evidence
 for the end of an emotional episode. Four conditions were distinguished: 1) the
 change from one emotion to another, 2) entering a neutral emotional state, 3) a
 character leaving an ongoing scene with no further evidence for its emotional
 state, and 4) the end of a scene.  Table \ref{tab:onoffset_indicators}
-describes all indicator categories.
+describes all distinguished cue categories.
 
-\begin{table}
+\begin{table*}
   \centering
   \begin{tabular}{lp{10cm}}
     \textbf{Label} & \textbf{Description} \\
     \\\hline\\
-    \textit{Onset}\\\\
+    \textit{Onset}\\
     AUDIO & Non-verbal audio cues, feelings expressed without words, for example laughing, crying, wheezing, sighing\\
     CONTEXT & Emotion portrayed through context information and not directly by a character, for example a social rejection of an individual by a group without visible emotional response\\
     GESTURE & Body language cues \\
@@ -144,7 +123,7 @@ describes all indicator categories.
     NARRATOR & Description of an emotion given by the narrator (only for audio stimulus)\\
     VERBAL & Emotion expressed through words either as a direct description (e.g. a self-report) or by means of a particular choice of words (e.g. harsh language)\\
     \\\hline\\
-    \textit{Offset}\\\\
+    \textit{Offset}\\
     EMOCHANGE & Present emotion is replaced by another, different emotion \\
     EMOFADED & Emotion fades with a change to an emotion neutral state \\
     CHARLEFT & Character leaves a scene (no further evidence for an emotion)\\
@@ -154,9 +133,8 @@ describes all indicator categories.
   \end{tabular}
   \caption{Categories for cues indicating the onset or offset of an emotion.}
   \label{tab:onoffset_indicators}
-\end{table}
+\end{table*}
 
-\hl{TODO: are there annotations that do not contain indicators specifications?}
 
 
 \paragraph{Character label}
@@ -167,31 +145,31 @@ annotation of the movie's dialog in order to achieve a consistent labeling.
 However, some characters portray emotions but have no lines of dialog, in other
 instances observer chose inconsistent labels. During data curation character
 labels were therefore manually consolidated into a set of 35 categories that
-uniformize labeling across observers. The full list of character labels is shown in table
-\ref{tab:characters}. The 35 character labels were derived using the following
-rules: a) main characters and famous/familiar characters receive an individual
-labels, as do the two narrator voices; b) relatives of main characters are
-labeled according to their relation; c) all other characters are consolidated
-into generic categories that preserve gender, age (children, adults, or seniors),
-and number (individual, or group).
+uniformize labeling across observers. The full list of character labels is
+shown in table \ref{tab:characters}. The 35 character labels were derived using
+the following rules: a) main characters and famous/familiar characters receive
+individual labels, as do the two narrator voices; b) relatives of main
+characters are labeled according to their relation; c) all other characters are
+consolidated into generic categories that preserve gender, age (children,
+adults, or seniors), and number (individual, or group).
 
-\begin{table}
+\begin{table*}
   \centering
   \begin{tabular}{p{4cm}p{4cm}p{3.6cm}p{4cm}}
     \textbf{Character label} & \textbf{Description} & \textbf{Character label} & \textbf{Description} \\
 \\\hline\\
 
-\multicolumn{4}{l}{\textit{Main characters}} \\\\
+\multicolumn{4}{l}{\textit{Main characters}} \\
 BUBBA     & Forrest's army pal & FORRESTJR & young Forrest Gump \\
 DAN       & Lt.~Dan & JENNY     & Forrest's love \\
 FORREST   & adult Forrest Gump &           & \\
 \\\hline\\
 
-\multicolumn{4}{l}{\textit{Special}} \\\\
+\multicolumn{4}{l}{\textit{Special}} \\
 FORRESTVO & voice-over narrator Forrest & NARRATOR & audio-description narrator \\
 \\\hline\\
 
-\multicolumn{4}{l}{\textit{Famous characters}} \\\\
+\multicolumn{4}{l}{\textit{Famous characters}} \\
  ABBIEHOFFMAN     & activist (lookalike actor)                   & NEILARMSTRONG    & first man on the moon (orig.~footage) \\ 
  BOBHOPE          & entertainer (orig.~footage)                  & PRESIDENTJOHNSON & US-president (orig.~footage) \\
  DICKCAVETT       & talk master (orig.~footage)                  & PRESIDENTKENNEDY & US-president (orig.~footage) \\
@@ -199,14 +177,14 @@ FORRESTVO & voice-over narrator Forrest & NARRATOR & audio-description narrator 
  JOHNLENNON       & Beatle (orig.~footage)                       & ROBERTKENNEDY    & Brother of J.~F.~Kennedey (orig.~footage) \\                  & \\
 \\\hline\\
 
-\multicolumn{4}{l}{\textit{Relatives of main characters}} \\\\
+\multicolumn{4}{l}{\textit{Relatives of main characters}} \\
 BUBBASGRGRANDMA   & Bubba's great-grandmother & JENNYSGRANDMA & Jenny's grandmother\\
 BUBBASGRGRGRANDMA & Bubba's great-great-grand\-mother & MRSBLUE       & Bubbas's mother\\
 BUBBASYOUNGBROTHER      & Bubba's young brother & MRSGUMP       & Forrest's mother \\
 JENNYSDAD               & Jenny's father &              & \\
 \\\hline\\
 
-\multicolumn{4}{l}{\textit{Generic character categories}} \\\\
+\multicolumn{4}{l}{\textit{Generic character categories}} \\
 CHILDREN  & group of children & MEN      & group of men \\
 GIRL      & individual girl & OLDMEN   & group of old men \\
 BOY       & individual boy & WOMAN    & individual woman \\
@@ -219,17 +197,22 @@ OLDMAN    & individual old man & CROWD    & group of people with mixed gender \\
   is associated with exactly one of these 36 labels. While main characters,
   their relatives, and famous characters have individual labels, all remaining
   characters in the movie are aggregated into generic categories that preserve
-  information on gender, ange group and number.}
+  information on gender, age group and number.}
   \label{tab:characters}
-\end{table}
+\end{table*}
+
+It is important to note that only emotions portrayed by one or more movie
+character where recorded. This excludes other potentially emotion-inducing
+stimuli, such as music in the soundtrack, or inanimate stimuli, like the
+depiction of a beautiful sunset, or chirping birds.
 
 \paragraph{Valence, arousal and direction}
 
 Binary variables were used to record the valence of an emotion (positive vs.
 negative), the state of arousal of the character portraying it (high vs. low),
 and whether the emotion is directed towards the character itself or another one
-(feeling pity for somebody). Together, these three indicator variable offer a
-coarse categorization of observed emotion in the spirit of dimensional models
+(e.g. feeling pity for somebody). Together, these three indicator variables offer a
+coarse categorization of observed emotions in the spirit of dimensional models
 of emotion.
 
 Arousal was considered a global indicator of the emotional status of a
@@ -238,23 +221,23 @@ high level of arousal for a character or a low level, but never both at the
 same time. Unlike arousal, valence and direction indicators were considered
 non-exclusive, i.e. a character could show signs of positive and negative
 emotions at the same time. Likewise a character could exhibit self-directed
-emotions, and emotions directed towards others simultaneously.
+emotions, and emotions directed towards others simultaneously. In order to
+annotate such situations, observers had to create records for two or more
+portrayed emotions with overlapping timing.
 
 \paragraph{Emotion labels}
 
-Observers were instructed to assign one of 22 discrete emotion labels. Emotion
-categories were derived from \cite{Ort1990} and concrete definitions were
-developed based on the Specific Affect Coding System \cite{CG2007}. The
-complete list of emotions is shown in table \ref{tab:emotion_categories}.
-Pre-tests using a larger and more detailed set of emotion categories reveal
-weak agreement between observers for a forced categorization of emotional
-episodes. Based on these results we decided to make this part of the annotation
-optional and observers were instructed to assign an emotion label only if they
-saw a ``perfect'' match with any of the categories.
+Observers were instructed to assign one of 22 labels for discrete emotion
+categories. These categories were derived from \cite{Ort1990} and concrete
+definitions were developed based on the Specific Affect Coding System
+\cite{CG2007}. The complete list of emotions is shown in table
+\ref{tab:emotion_categories}.  Pre-tests using a larger and more detailed set
+of emotion categories revealed weak agreement between observers for a forced
+categorization of emotional episodes. Based on these results we decided to make
+this part of the annotation optional and observers were instructed to assign an
+emotion label only if they saw a ``perfect'' match with any of the categories.
 
-\hl{TODO: give list of max inter-rater reliability for labels}
-
-\begin{table}
+\begin{table*}
   \centering
   \begin{tabular}{lp{10cm}}
     \textbf{Label} & \textbf{Description} \\
@@ -286,9 +269,30 @@ saw a ``perfect'' match with any of the categories.
   \caption{List of 22 emotion categories observer could (optionally) use to
     futher qualify the nature of a portrayed emotion. \hl{TODO: doublecheck descriptions}}
   \label{tab:emotion_categories}
-\end{table}
+\end{table*}
 
+\subsection*{Quality assurance}
 
+We used an automated procedure to check annotation records of individual
+observer for errors, or potential problems. Observers submitted their
+annotations in tabular form to a script that generated a list of error and
+warning messages. Using this feedback, observers double-checked their
+annotations as often as necessary until no objective errors were found and
+all warning messages were confirmed to be false positives. The following
+annotation properties were tested:
+
+\begin{itemize}
+  \item start time had to precede end time (error)
+  \item no character label (error)
+  \item no onset cue label (error)
+  \item missing arousal, valence, or direction value (error)
+  \item conflicting simultaneous arousal annotation for the same character (error)
+  \item emotion portrayed for longer than a minute (warning)
+  \item annotation starts prior to a scene start or ends after a scene end
+    (warning)
+  \item unrecognized code/label for any variable (warning)
+  \item no offset cue label (warning)
+\end{itemize}
 
 \subsection*{Data file organization}
 
@@ -302,10 +306,10 @@ movie and \texttt{ao} for the audio-only movie), as well as the observer
 identity.
 
 Each file contains nine columns that correspond to the annotation properties
-described above. \texttt{start})~start and \texttt{end})~end time of an emotion
+described above. \texttt{start}, \texttt{end})~start and end time of an emotion
 episode, reported in seconds from the start of the movie; \texttt{character})~a
 single character label from the set shown in table \ref{tab:characters}
-indication the character portraying the emotion; \texttt{arousal})~state of
+indicating the character portraying the emotion; \texttt{arousal})~state of
 arousal indicated with the labels \texttt{LOW} or \texttt{HIGH};
 \texttt{valence})~emotional valence indicated with the label \texttt{POS} or
 \texttt{NEG}; \texttt{direction})~direction of the emotion indicated with the
@@ -314,14 +318,18 @@ of emotion labels from the set shown in table \ref{tab:emotion_categories};
 \texttt{oncue})~a space-separated list of onset indicators for a portrayed
 emotion from the set shown in table \ref{tab:onoffset_indicators}; and
 \texttt{offcue})~a space-separated list of offset indicators from the set also
-shown in table \ref{tab:onoffset_indicators}.  The first six columns contain
-mandatory information that is present for all annotations. The remaining
-columns contain optional attributes and can be empty.
+shown in table \ref{tab:onoffset_indicators}.  With the exception of the columns
+\texttt{emotion} and \texttt{offcue} all variables are considered mandatory
+and are present for all annotations. The remaining columns contain optional
+attributes and can be empty.
+
+\hl{TODO: Add emotion segmentation/annotation for the movie for variable
+inter-rater agreement threshold}
 
 \subsection*{Time stamp conversion}
 
 To be able to use the provided emotion annotations for an analysis of
-functional data (fMRI, respiratory and cardiac trace) acquired using the
+functional data (fMRI, cardiac trace, etc.) acquired using the
 procedure described in~\cite{HBI+14} timing information has to be converted,
 because data were recorded in eight sessions using partially overlapping
 segments of the movie. Table \ref{tab:timing} specifies the location of these
@@ -357,209 +365,3 @@ available functional data.
 
 %\paragraph{Jokes}
 %Finally, we also annotated jokes during the movie, defining them as scenes or lines that were intended to be funny and make the audience laugh. Jokes were annotated only in their duration and marked with the abbreviation JOK in the emotion column. 
-%
-
-% Raters
-% 
-% The sample consisted of 14 psychology students in the third semester of the
-% Bachelor from the Otto-von-Guericke university in Magdeburg . The participants
-% assigned to a group which either annotated the audio-visual version of the
-% movie or listened only to the audio track with additional audio description for
-% visual impaired people. … students worked in the first group, consisting of …
-% female and … male participants ranging from .. to.. years. … male raters
-% participated in the audio-based group. They were … to … years old. The study
-% was conducted during a graded course dealing with experimental observation.
-% Students were rewarded with 2 CP for completing the seminar. 
-% 
-% Setup
-% 
-% First each rater was obliged to download and install the programme advene\cite{AP2005}, a
-% software to share annotations about digital video documents from the following
-% website: http://liris.cnrs.fr/advene/download.html.
-% 
-% The unitary version of the movie Forrest Gump was imported to this programme.
-% We decided to set the time format uniformly to seconds.milliseconds. The
-% program was chosen to ensure consistent basic conditions while watching the
-% movie.
-% 
-% For the annotation process we used a numbered list of all scenes with start and
-% end point, occurring characters and setting. Every rater randomized the scenes
-% using a self chosen random number generator to obtain objectivity and to avoid
-% sequence effects.
-% 
-% Rating conditions
-% 
-% Every rater was instructed to annotate the movie in a relaxed state without
-% time pressure. Furthermore, the session needed to be neutral and with a low
-% rate of stimuli, to avoid any distractions, neither by technical devices nor
-% other programmes. Hence every rater was supposed to use headphones. Any
-% communication between the participants should be prevented by working
-% separately during the annotation process to make sure the results were
-% independent.
-% 
-% Each rater annotated the whole entirety of the scenes. The scene number refers
-% to the standardized number of the presented movie version shown in advene\cite{AP2005}.
-% Every participant created an individual table with their preferred program to
-% work with.
-% 
-% Rating Content 
-% 
-% Every annotation consisted of the following elements: the scene number;
-% temporal occurrence; the name of the character; dimensions of valence, arousal
-% and direction of the emotion, onset and offset cues and jokes.
-% 
-% To investigate time course of jokes we rounded beginning and ending of each
-% joke to whole seconds. All of the other columns were left blank. 
-% 
-% Scene number and time
-% 
-% The scene number was used for improved detection of mistakes in the annotation
-% of the time occurrence. Beginning and ending of the displayed emotions was
-% rounded to whole seconds.
-% 
-% Valence, arousal and direction
-% 
-% The rating of the three dimensions was feasible by using a binary code or
-% shortcut. Positive valence might be abbreviated with “pos”, “p” or 1, whereas
-% “neg”,”n” or 0 stood for negative valence. High arousal was synonymous to
-% “high”,”h” or 1, low arousal to “low”,”l” or 0. Finally, “self”,”s” or 0 was a
-% shortcut for self-directed emotions and “other”,”o” or 1 was used for emotions,
-% which were elicited or directed towards other people. 
-% 
-% Emotion labels
-% 
-% Each participant was also able to assign discrete emotion labels using the
-% Cognitive Structure of Emotions \cite{Ort1990} or leave specific comments.
-% Based on the Specific Affect Coding System \cite{CG2007} we developed
-% definitions for the emotions in the named model in order to achieve a
-% collective comprehension. A final list of our discrete emotion labels is
-% attached at the end of our research paper. 
-% 
-% Onset and offset indicators
-% 
-% Onset and offset indicators define what kind of cues were used to decide on the
-% portrayed emotion.
-% 
-% Likewise every annotation starts with an onset indicator and ends with an
-% offset indicator. 
-% 
-% Onset indicators might contain mimic (m), gesture and body language (g),
-% context (c), verbal (v) and non-verbal audio cues (a). Participants only rating
-% the audiotrack of the movie could also use a narrator cue (n) as an indicator
-% for emotions.
-% 
-% Context cues refer to any portrayed emotion that is inferred from the situation
-% rather than perceptual cues.
-% 
-% Offset indicators included emotion change (e), fading of an emotion (f), the
-% departure of a character (l) and scene ends (s).
-% 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% The group of raters consisted of XXX students (XXX male, XXX female) of
-% psychology in the third semester age XXX to XXX ( mean=XXX). The process of
-% annotation, preparation, raising and processing of the data will be described
-% in the following.
-% 
-% To reach the final state of our annotation tool several test runs were
-% necessary. We started by using the categorical approach in order to classify
-% the most important emotions and differentiate them clearly from one another. We
-% decided to adopt the “global structure of emotions” \cite{Ort1990}.
-% Others, like Ekman and Friesen’s well-established model of the six basic
-% emotions\cite{EF1975} seemed too reductive for our purpose. The catalogue
-% incorporates 22 different emotions, which are listed below. Knowing  that each
-% emotion is a subjective construct, we added individual definitions based on
-% Ortony’s explications and, if necessary, our own experience. By that we hoped
-% to reduce the heterogeneity of interpretation and thus to increase the
-% inter-rater reliability. 
-% 
-% After testing our first concept twice, we realized that some explicitly
-% depicted emotions were not classifiable within our emotion catalogue. We
-% decided to widen the rating possibilities by adding the three dimensional
-% categories valence (positive/negative), arousal (high/low) and direction
-% (self/other). In the following, every depicted emotion had to be rated
-% dimensionally, using binary coding, but the previously binding categorical tag
-% was now optional. In that way it was no longer necessary to fit the depicted
-% emotions into the offered categories if the raters did not find a matching
-% description. The additional tagging of specific emotions nevertheless broadens
-% the informative value of the dimensional descriptions and was therefore
-% continued. In effect this method turned out positively as inter-rater
-% reliability improved.
-% 
-% During the process of annotation the raters were urged to work alone, and
-% minimize distractions by technical devices (i.e. mobile phones) and by their
-% surroundings. They were therefore also required to use headphones. In addition
-% communication among raters about details of the annotation was not allowed.
-% 
-% One set of 4/5 raters annotated an audio file of the movie, thereby
-% contributing data comparible to MRI and EEG data gathered during previous
-% phases of the studyforrest project from participants only listening to the
-% audio version of the movie.
-% 
-% In order to structure the annotation process we decided to analyze the movie
-% scenewise. Every rater annotated all 240 scenes in a randomized order so that
-% any bias caused by the movie plot could be prevented. All raters used the same
-% license-free program, Advene\cite{AP2005}, to play the video material while annotating the
-% scenes, in this way, making sure everyone referred to the same timeline.
-% Annotations were made in spreadsheets, each rater using the program of his
-% choice but applying a consistent composition of the table (see table).
-% 
-% The subgroup of raters attending to the audio version followed the same
-% instruction manual, the only exception being the use of a different file and
-% covering/closing the visual display in Advene.
-% 
-% Furthermore we annotated the character expressing the emotion, abbreviating the
-% names of the six most frequent characters, and the duration of the shown
-% emotion. For every annotation the raters had to state the precise time an
-% emotional depiction started and ended in seconds.  For additional infomation on
-% the circumstances emotions were expressed in, we implemented onset- and
-% offset-indicators  that started or ended an emotion (for complete list see
-% indicators). The time that we first/last perceived an indicator, had to mark
-% the exact beginning/end of the emotion. If there was more than one valid
-% indicator present they were listed in alphabetical order and separated by a
-% blank character (e.g. context and mimic onset-cue together were marked as “c
-% m”). This way we were not limited to only one or two response systems, but were
-% able to describe expressed emotion on various levels. The complete list and
-% definitions of all the indicators used can be found in the instruction manual.
-% 
-% Finally, we also annotated jokes during the movie, defining them as scenes or
-% lines that were intended to be funny and make the audience laugh. Jokes were
-% annotated only in their duration and marked with the abbreviation JOK in the
-% emotion column.
-% 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% As a first step we searched for a fitting model of cataloguing emotions. We
-% ultimately used the 22 emotion labels according to the model of Ortony, Clore
-% and Collins (citation 1) but additionally collected dichotomous data for the
-% valence, arousal and direction of the elicited emotion, to avoid the problem of
-% rating ambiguous emotions. To ensure the interrater reliability we developed a
-% standardized annotation manual (attachment 1). 
-% 
-% For the purpose of annotation we used the open source annotation-program
-% 'Advene'\cite{AP2005} which we loaded with the research cut of ‘Forrest Gump’ and the
-% previously raised stimulus annotations from the Study Forrest project (citation
-% 2). The movie was then displayed scene by scene whereas the individual segments
-% where randomized by a random number generator.
-% 
-% The raters were separated into two groups: Group one annotated the audiovisual
-% version of the movie; group two raised the information from an audio track for
-% visually impaired listeners.
-% 
-% Both groups were advised to operate strictly after the provided
-% annotation-manual.  The rating process itself was spread out over three weeks;
-% the raters were advised to work individually in a distraction free environment
-% of their choosing with a neutral emotional state.
-% 
-% The annotation itself could be written in any table or a text-processing
-% program, as long as raters adhered to the standardized mask stipulated in the
-% manual and didn’t exchange information relevant to the rating process. 
-% 
-% The separate results where then cumulated into one single dataset for
-% evaluation.
