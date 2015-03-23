@@ -22,8 +22,8 @@ characters Forrest, Dan, and Jenny.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\linewidth]{figures/character_episodes}\\
-  \includegraphics[width=\linewidth]{figures/labeledemotion_episodes}
+  \includegraphics[trim=50 40 25 36,clip,width=\linewidth]{figures/character_episodes}\\
+  \includegraphics[trim=50 40 25 36,clip,width=\linewidth]{figures/labeledemotion_episodes}
   \caption{Annotation frequencies by character and emotion. The minimum
     criterion for counting emotion episodes is a \AVAggThresh\ inter-observer agreement.
     Only categories/characters with a minimum of five such episodes are shown.
@@ -66,7 +66,7 @@ feasibile.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\linewidth]{figures/labeledoncue_episodes}
+  \includegraphics[trim=00 40 35 26,clip,width=\linewidth]{figures/labeledoncue_episodes}
   \caption{Number of emotion episodes for all distinguished onset cue categories
     (minimum \AVAggThresh\ inter-rater agreement) for both stimulus types.}
   \label{fig:threshlabeledoncue}
@@ -80,26 +80,13 @@ Therefore, the IOA with respect to a particular aspect of
 portrayed emotions at any given time in the movie could be seen as a measure of
 the relative probability of perceiving an emotion feature. In order to assess
 the reliability of such a measure, we generated time series for the
-IOA with a sampling rate of \unit[1]{Hz}. From the
-annotations of each individual observer a binary time series was created by
-setting all data points covered by any annotation matching the respective
-criterion to 1 and all remaining data points to zero. The average time series
-across observers reflects the IOA at any given time in the
-movie. For the bipolar annotation attributes \textit{arousal},
-\textit{valence}, and \textit{direction} aggregate time series where computed
-by subtracting the IOA with respect to the presence of the
-both extremes from each other.  For example, the time series for
-\textit{arousal} was computed by subtracting the time series of the
-IOA for low-arousal episodes from the time series of
-high-arousal episodes. This results in values from an interval of [-1,1], where
--1 corresponds to perfect agreement with respect to the presence of a
-low-arousal episode, and +1 indicating perfect agreement regarding high
-arousal. Figure \ref{fig:indicatortsallchar} shows the IOA
-time courses for a selected subset of annotated emotion attributes.
+IOA with a sampling rate of \unit[1]{Hz}, as described above, and evaluated
+their reliability and validity in terms of their correlation across observers,
+stimulus types, and with each other.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\linewidth]{figures/indicator_ts_allchar}\\
+  \includegraphics[trim=10 75 70 50,clip,width=\linewidth]{figures/indicator_ts_allchar}\\
   %includegraphics[width=\linewidth]{figures/indicator_ts_forrest}
   \caption{Inter-observer agreement (IOA) time courses for selected emotion
     attributes across the full duration of the movie. Extreme values indicate
@@ -308,6 +295,6 @@ transformation).}
 
 \hl{TODO: are there annotations that do not contain indicators specifications?
 
-Current: \AVFracWithLabeledEmotions \AVFracWithLabeledOncue \AOFracWithLabeledEmotions \AOFracWithLabeledOncue
+Current: \AVFracWithLabeledOncue \AOFracWithLabeledOncue
 }
 
