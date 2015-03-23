@@ -18,8 +18,6 @@ narrations) and the exact same timing (and cut scenes) as the audio-only
 version \cite[contains instructions on how to reproduce the stimulus from the
 DVD release]{HBI+14}.
 
-\hl{TODO: include script for blueray conversion}
-
 \subsection*{Observers}
 
 Annotations were created by the authors themselves as part of a practical
@@ -294,16 +292,21 @@ annotation properties were tested:
   \item no offset cue label (warning)
 \end{itemize}
 
-\subsection*{Data file organization}
+\subsection*{Dataset content}
 
-In order to maximize utility of the annotations they are released in full, and
-not only as aggregate information. The annotations from each observer are
-available in an individual plain text file with comma-separated value (CSV)
-markup. This file format facilitates import and further processing in virtually
-any software application that supports data in tabular form. The filenames
-indicate the annotated stimulus type (prefix \texttt{av} for the audio-visual
-movie and \texttt{ao} for the audio-only movie), as well as the observer
-identity.
+The release data comprises four components: raw annotations, aggregate
+inter-observer agreement (IOA) time series, emotion episode segmentations, and
+the source code to generate all data derived from the raw annotations, as well
+as all summary statistics presented in the Data Note.
+
+\paragraph{Raw annotations} In order to maximize the utility of the annotations
+they are released in full, and not only as aggregate information. The
+annotations from each observer are available in an individual plain text file
+with comma-separated value (CSV) markup in the \texttt{raw} directory. This
+file format facilitates import and further processing in virtually any software
+application that supports data in tabular form. The file names indicate the
+annotated stimulus type (prefix \texttt{av} for the audio-visual movie and
+\texttt{ao} for the audio-only movie), as well as the observer identity.
 
 Each file contains nine columns that correspond to the annotation properties
 described above. \texttt{start}, \texttt{end})~start and end time of an emotion
@@ -323,8 +326,81 @@ shown in table \ref{tab:onoffset_indicators}.  With the exception of the columns
 and are present for all annotations. The remaining columns contain optional
 attributes and can be empty.
 
-\hl{TODO: Add emotion segmentation/annotation for the movie for variable
-inter-rater agreement threshold}
+\paragraph{Inter-observer agreement (IOA) time series} IOA time series reflect
+the consistency of observations at any particular time in the movie. The time
+series amplitude corresponds to the fraction of observers indicating the
+presence of a particular attribute of an emotion eposide (interval [0,1]). Time
+series for the three bipolar attriutes \textit{arousal}, \textit{valence}, and
+\textit{direction}, were computed by subtracting the IOA with respect to the
+presence of the both extremes from each other.  For example, the time series
+for \textit{arousal} was computed by subtracting the time series of the IOA for
+low-arousal episodes from the time series of high-arousal episodes. This
+results in values from an interval of [-1,1], where -1 corresponds to perfect
+agreement with respect to the presence of a low-arousal episode, and +1
+indicating perfect agreement regarding high arousal.
+
+IOA time series were computed for three different segment durations (i.e.
+agreement is considered when observers indicate the presence of a particular
+attribute anywhere in a segment): \unit[1]{s} (temporal precision of the
+annotations), \unit[2]{s} (corresponding sampling rate of the available brain
+imaging data), and the actual location and duration of individual shots in the
+movie (median duration $\approx$\unit[5]{s}). Individual time series for the
+three bipolar attributes, all 22 emotion categories, and the six emotion onset
+cues are available in the \texttt{timeseries} directory. The file names are
+encode as follows: prefix \texttt{ioats}, followed by a label for the segment
+duration (e.g. \texttt{1s}), following by the stimulus label (\texttt{av} or
+\texttt{ao}), and a character label (e.g. \texttt{forrest}, see
+table~\ref{tab:characters}) or \texttt{allchar} for an aggregate time series
+across all characters. All files are in plain text format with CSV markup. The
+column headers indicate the corresponding emotion attribute.
+
+\paragraph{Emotion episode segmentation}
+
+Based on IOA time series a segmentation of the movie into episodes of portrayed
+emotion was performed for each of the 35 character categories individually. IOA
+time series for 33 attributes (arousal (bipolar), valence and direction
+(separate for each state), 22 emotion category labels, and six onset cues) were
+binarized by thresholding with a minimum absolute IOA of 50\%.  An episode of
+portrayed emotion was defined as a time window with at least one super
+threshold emotion attribute. The duration of an episode was determined by the
+number of consecutive movie segment without a change in the unique combination
+of super threshold attributes.
+
+Emotion episodes for all characters are available in the \texttt{segmentation}
+directory in plain-text files with tab-separated value (TSV) markup. The file
+formats follows the conventions required by the Advene software for
+``simple-structured content'', but are also compatible with generic spreadsheet
+applications. Each file contains three columns (without a header). The two
+columns contain the start and end time of an episode in seconds. The third
+column contains a space-separated list of key/value pairs. Five such properties
+are present for each episode: \texttt{char}) the label of the character
+portraying the emotion; \texttt{tags}) a comma-separated list of tags
+corresponding to all super-threshold emotion attributes; the three remaining
+properties \texttt{arousal}, \texttt{val\_pos}, and \texttt{val\_neg}
+corresponds to the median IOA value across the entire episode for arousal
+(bipolar), positive and negative valence (each unipolar). The names of all tags
+typically correspond to the lower-case name of the attribute, with the
+exception of the three bipolar attributes, where each extreme is coded with a
+dedicated label (arousal: \texttt{ha/la} (high/low); valence: \texttt{pos/neg};
+direction: \texttt{self/other}.
+
+Emotion episode segmentation was performed separately for the audio-visual and
+the audio-only movie, and once with IOA time series sampled with a \unit[1]{s}
+segment size and a second time sampled with the actual duration and location of
+shots in the audio-visual movie. File names encode these conditions as follows:
+prefix \texttt{emotions} followed by the stimulus label (\texttt{av} or
+\texttt{ao}), followed by the segment size label (\texttt{1s} or
+\texttt{shots}).
+
+
+\paragraph{Source code}
+
+The full source code for all descriptive statistics and figures included in
+this paper is available in \texttt{descr\_stats.py} (Python script). Moreover,
+this script also contains all functionality to generate the IOA time series, as
+well as the emotion episode segmentation from the raw annotations in the data
+release.
+
 
 \subsection*{Time stamp conversion}
 
