@@ -50,8 +50,8 @@ Here we present a dataset with a description of portrayed emotions in the movie
 episodes regarding their temporal location and duration. The nature of an
 emotion was characterized with basic attributes, such as arousal and valence,
 as well as explicit emotion category labels. In addition, annotations include a
-record of the perceptual evidence indicating the presence of an emotion. Two
-variants of the movie were annotated separately: 1) an audio-only version of
+record of the perceptual evidence for the presence of an emotion. Two
+variants of the movie were annotated separately: 1) an audio-movie version of
 Forrest Gump that has been used as a stimulus for the acquisition of a large
 \href{http://studyforrest.org}{public functional brain imaging dataset}, and
 2)~the original audio-visual movie. We present reliability and consistency
@@ -73,7 +73,7 @@ of these data.
 %and future work.
 
 Recently, we have published a dataset with high-resolution functional magnetic
-resonance (fMRI) data of 20 participants listening to a two-hour audio-only
+resonance (fMRI) data of 20 participants listening to a two-hour audio-movie
 version of the Hollywood feature film ``Forrest Gump'' \cite{HBI+14}. Using
 prolonged complex naturalistic stimuli, such as this one, is one approach to
 study cognitive processing in situations that resemble real-life contexts more
@@ -462,9 +462,9 @@ properties were tested:
 
 \subsection*{Dataset content}
 
-The release data comprises five components: 1) raw annotations 2) aggregate
+The release data comprises four components: 1) raw annotations 2) aggregate
 inter-observer agreement (IOA) time series 3) emotion episode segmentations 4)
-the source code to generate all data derived from the raw annotations and 5) all
+the source code to generate all data derived from the raw annotations and all
 summary statistics presented in the Data Note.
 
 \paragraph{Raw annotations} In order to maximize the utility of the annotations,
@@ -497,14 +497,14 @@ optional attributes and can be empty.
 \paragraph{Inter-observer agreement (IOA) time series} IOA time series reflect
 the consistency of observations at any particular time in the movie. The time
 series amplitude corresponds to the fraction of observers indicating the
-presence of a particular attribute of an emotion episode (interval [0,1]). Time
+presence of a particular attribute of an emotion episode (interval $[0,1]$). Time
 series for the three bipolar attributes \textit{arousal}, \textit{valence}, and
 \textit{direction} were computed by subtracting the IOA with respect to the
 presence of the both extremes from each other. For example, the time series
 for \textit{arousal} was computed by subtracting the time series of the IOA for
 low-arousal episodes from the time series of high-arousal episodes. This
-results in values from an interval of [-1,1] --- where -1 corresponds to perfect
-agreement with respect to the presence of a low-arousal episode and +1 indicates
+results in values from an interval of $[-1,1]$ --- where $-1$ corresponds to perfect
+agreement with respect to the presence of a low-arousal episode and $+1$ indicates
 perfect agreement regarding high arousal.
 
 IOA time series were computed for three different segment durations (i.e.,
@@ -843,7 +843,9 @@ correlation of IOA time courses for the AV and the AO movie with respective to
 emotion attributes and categories. Table~\ref{tab:interstim_consistency} shows
 the respective correlations and their 95\% confidence interval. Again, the
 three dimensional attributes as well as the five most frequent emotion
-categories show significant correlations. This is evidence for an expected
+categories show significant correlations. Notably, verbal cues are the most
+consistent indicator of emotions across both types of stimuli.
+This is evidence for an expected
 substantial semantic similarity with respected to the emotional content in the
 two variants of the ``Forrest Gump'' movie.
 
@@ -945,14 +947,87 @@ Sciences.
 %Grant information section - See above).
 
 We are grateful to Roland Nigbur for his advice during all stages of this
-study and for his feedback on the manuscript. We thank Alex Waite for his help
-and insight with the editing of the manuscript, not to mention his dashing good
-looks, heart-warming charm, and overall superior taste in beer.
+study. Additionally, we thank Alex Waite and Florian Baumgartner for their
+feedback on the manuscript.
 
-%\nocite{*}
-{\small\bibliographystyle{unsrt}
-\bibliography{bibliography/biblio}}
+{\small
+\begin{thebibliography}{10}
 
+\bibitem{HBI+14}
+M.~Hanke, F.~J. Baumgartner, P.~Ibe, F.~R. Kaule, S.~Pollmann, O.~Speck,
+  W.~Zinke, and J.~Stadler.
+\newblock {A high-resolution 7-{T}esla f{MRI} dataset from complex natural
+  stimulation with an audio movie}.
+\newblock {\em Scientific Data}, 1, 2014.
+
+\bibitem{HH2012}
+Uri Hasson and Christopher~J. Honey.
+\newblock Future trends in neuroimaging: Neural processes as expressed within
+  real-life contexts.
+\newblock {\em NeuroImage}, 62:1272--1278, 2012.
+
+\bibitem{GL1995}
+J.~J. Gross and R.~W. Levenson.
+\newblock {Emotion elicitation using films}.
+\newblock {\em Cognition \& Emotion}, 9:87--108, 1995.
+
+\bibitem{Ekm1992b}
+P.~Ekman.
+\newblock {Facial expressions of emotion: New findings, new questions}.
+\newblock {\em Psychological Science}, 3:34--38, 1992.
+
+\bibitem{EVS+2009}
+T.~Ethofer, D.~{Van De Ville}, K.~Scherer, and P.~Vuilleumier.
+\newblock {Decoding of emotional information in voice-sensitive cortices}.
+\newblock {\em Current Biology}, 19:1028--1033, 2009.
+
+\bibitem{SS2014}
+A.~E. Skerry and R.~Saxe.
+\newblock {A Common Neural Code for Perceived and Inferred Emotion}.
+\newblock {\em Journal of Neuroscience}, 34:15997--16008, 2014.
+
+\bibitem{GW2007}
+E.~K. Gray and D.~Watson.
+\newblock {Assessing positive and negative affect via self-report}.
+\newblock In J.~A. Coan and J.~J.~B. Allen, editors, {\em {Handbook of emotion
+  elicitation and assessment}}, pages 171--183. Oxford University Press,
+  Oxford, 2007.
+
+\bibitem{Ekm1992a}
+P.~Ekman.
+\newblock {An argument for basic emotions}.
+\newblock {\em Cognition \& Emotion}, 6:169--200, 1992.
+
+\bibitem{Sch2005}
+K.~R. Scherer.
+\newblock {What are emotions? And how can they be measured?}
+\newblock {\em Social Science Information}, 44:695--729, 2005.
+
+\bibitem{Rus1980}
+J.~A. Russell.
+\newblock {A circumplex model of affect}.
+\newblock {\em Journal of Personality \& Social Psychology}, 39:1161--1178,
+  1980.
+
+\bibitem{CG2007}
+J.~A. Coan and J.~M. Gottman.
+\newblock {The specific affect coding system ({SPAFF})}.
+\newblock In J.~A. Coan and J.~J.~B. Allen, editors, {\em {Handbook of emotion
+  elicitation and assessment}}, pages 267--285. Oxford University Press,
+  Oxford, 2007.
+
+\bibitem{AP2005}
+Olivier Aubert and Yannick Pri{\'e}.
+\newblock {Advene: active reading through hypervideo}.
+\newblock In {\em {Proceedings of ACM Hypertext}}, pages 235--244, 2005.
+
+\bibitem{Ort1990}
+A.~Ortony.
+\newblock {\em {The cognitive structure of emotions}}.
+\newblock Cambridge university press, 1990.
+
+\end{thebibliography}
+}%\small
 \end{document}
 
 % vim: textwidth=80 colorcolumn=81
